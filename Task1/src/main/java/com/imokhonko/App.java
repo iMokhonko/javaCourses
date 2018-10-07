@@ -1,45 +1,46 @@
 package com.imokhonko;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class App {
 
-    // range
-    private static int startNumber;
-    private static int endNumber;
-
     // sum of numbers
     private static int sumOfEvenNumbers = 0;
     private static int sumOfOddNumbers = 0;
 
-    private static int F1; // biggest odd number
-    private static int F2; // biggest even number
+    private static long F1; // biggest odd number
+    private static long F2; // biggest even number
 
     // lists of evens and odds numbers from range
-    private static List<Integer> evens = new ArrayList<>();
-    private static List<Integer> odds = new ArrayList<>();
+    private static List<Long> evens = new ArrayList<>();
+    private static List<Long> odds = new ArrayList<>();
+    private static List<Long> fibonacci = new ArrayList<>();
 
     public static void main(String[] args) {
+        // range
+        int startRange;
+        int endRange;
+        int fibonacciCount;
+
         Scanner scanner = new Scanner(System.in);
 
-        // start number
-        System.out.print("Enter the start number -> ");
-        startNumber = scanner.nextInt();
+        // start number in the interval
+        System.out.print("Enter the start number in the interval -> ");
+        startRange = scanner.nextInt();
 
-        // end number
-        System.out.print("Enter the end number -> ");
-        endNumber = scanner.nextInt();
+        // end number in the interval
+        System.out.print("Enter the end number in the interval -> ");
+        endRange = scanner.nextInt();
 
         // adding numbers to its lists
-        for(int i = startNumber; i <= endNumber; i++) {
+        for(int i = startRange; i <= endRange; i++) {
             if(i % 2 != 0) {
-                odds.add(i); // add odd number to list of odd numbers
+                odds.add((long) i); // add odd number to list of odd numbers
                 sumOfOddNumbers += i; // increasing the sum of odd numbers
             } else {
-                evens.add(i); // add even number to list of odd numbers
+                evens.add((long) i); // add even number to list of odd numbers
                 sumOfEvenNumbers += i; // increasing the sum of even numbers
             }
         }
@@ -57,48 +58,68 @@ public class App {
         System.out.println("\nSum of odd numbers = " + sumOfOddNumbers);
         System.out.println("Sum of even numbers = " + sumOfEvenNumbers);
 
-        System.out.print("Even fibonacci: ");
-        printFibonacci(evens);
-        System.out.print("\nOdd fibonacci: ");
-        printFibonacci(odds);
+        // fibonacci set size
+        System.out.print("Enter the size of fibonacci numbers set -> ");
+        fibonacciCount = scanner.nextInt();
 
-        // max fibonacci values
-        F1 = maxFibonacciNumber(odds);
-        F2 = maxFibonacciNumber(evens);
+        /* adding fibonacci numbers to list */
+        fibonacci.add((long) 0);
+        fibonacci.add((long) 1);
+        for(int i = 2; i < fibonacciCount; i++) fibonacci.add(fibonacci.get(i - 1) + fibonacci.get(i - 2));
 
-        System.out.println("\nBiggest odd number in fibonacci = " + F1);
-        System.out.println("Biggest even number in fibonacci = " +F2);
 
-        int allNumbersCount = odds.size() + evens.size();
+        System.out.println("Fibonacci: " + fibonacci);
 
-        System.out.println("Percentage of odd numbers: " +  (( (float) odds.size() / allNumbersCount) * 100) + "%");
-        System.out.println("Percentage of even numbers: " +  (( (float) evens.size() / allNumbersCount) * 100) + "%");
+        // max fibonacci odd value
+        F1 = getMaxFibonacciOddNumber(fibonacci);
+        // max fibonacci even value
+        F2 = getMaxFibonacciEvenNumber(fibonacci);
+
+        System.out.println("Max odd number in fibonacci sequence: " + F1);
+        System.out.println("Max even number in fibonacci sequence: " + F2);
+
+        evens.clear();
+        odds.clear();
+
+        for(long number : fibonacci)
+            if(number % 2 == 0)
+                evens.add(number);
+            else
+                odds.add(number);
+
+        System.out.println("Percentage of odd numbers: " + ((float)odds.size() / fibonacci.size() * 100) + "%");
+        System.out.println("Percentage of even numbers: " + ((float)evens.size() / fibonacci.size() * 100) + "%");
     }
 
     /**
-     * Calculates the max value in Fibonacci list
-     * @param numbers - list of Fibonacco numbers
-     * @return max value in Fibonacci
+     * Calculates the max odd value in Fibonacci sequence
+     * @param numbers list of Fibonacci numbers
+     * @return max odd value in Fibonacci sequence
      */
-    private static int maxFibonacciNumber(List<Integer> numbers) {
-        numbers.sort((o1, o2) -> o1 - o2); // sort this list if numbers are not in natural order
-        return numbers.get(numbers.size() - 2) + numbers.get(numbers.size() - 1);
+    private static long getMaxFibonacciOddNumber(List<Long> numbers) {
+        long result = 0;
+        for(int i = numbers.size() - 1; i >= 0; i--)
+            if(numbers.get(i) % 2 != 0) {
+                result = numbers.get(i);
+                break;
+            }
+        return result;
     }
 
     /**
-     * Prints Fibonacci numbers from list.
-     * @param numbers - list of Integer numbers
+     * Calculates the max even value in Fibonacci sequence
+     * @param numbers list of Fibonacci numbers
+     * @return max even value in Fibonacci sequence
      */
-    private static void printFibonacci(List<Integer> numbers) {
-        int first = numbers.get(0);
-        int second = numbers.get(1);
-        System.out.print(first + " " + second + " ");
-
-        for(int i = 2; i <= numbers.size(); i++) {
-            int curretFibNumber = numbers.get(i - 2) + numbers.get(i - 1);
-            System.out.print(curretFibNumber + " ");
+    private static long getMaxFibonacciEvenNumber(List<Long> numbers) {
+        long result = 0;
+        for(int i = numbers.size() - 1; i >= 0; i--) {
+            if(numbers.get(i) % 2 == 0) {
+                result = numbers.get(i);
+                break;
+            }
         }
+        return result;
     }
-
 
 }

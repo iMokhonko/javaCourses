@@ -6,23 +6,39 @@ import java.util.Scanner;
 
 public class App {
 
-    // sum of numbers
+    /**
+     * Sum of even numbers in a range
+     */
     private static int sumOfEvenNumbers = 0;
+
+    /**
+     * Sum of odd numbers in a range.
+     */
     private static int sumOfOddNumbers = 0;
 
-    private static long F1; // biggest odd number
-    private static long F2; // biggest even number
-
-    // lists of evens and odds numbers from range
+    /**
+     * List of even numbers in a range.
+     */
     private static List<Long> evens = new ArrayList<>();
+
+    /**
+     * List of odd numbers in a range.
+     */
     private static List<Long> odds = new ArrayList<>();
+
+    /**
+     * List of Fibonacci sequence.
+     */
     private static List<Long> fibonacci = new ArrayList<>();
 
     public static void main(String[] args) {
-        // range
-        int startRange;
-        int endRange;
-        int fibonacciCount;
+        int startRange; // First number in the interval
+        int endRange; // Last number in the interval
+
+        int fibonacciCount; // The size of the Fibonacci sequence
+
+        long biggestOdd; // Biggest odd number in the Fibonacci sequence
+        long biggestEven; // Biggest even number in the Fibonacci sequence
 
         Scanner scanner = new Scanner(System.in);
 
@@ -45,7 +61,7 @@ public class App {
             }
         }
 
-        // print odds numbers
+        // print odd numbers
         System.out.print("Odds: ");
         odds.forEach((number) -> System.out.print(number + " "));
 
@@ -58,45 +74,48 @@ public class App {
         System.out.println("\nSum of odd numbers = " + sumOfOddNumbers);
         System.out.println("Sum of even numbers = " + sumOfEvenNumbers);
 
-        // fibonacci set size
+        /* fibonacci set size */
         System.out.print("Enter the size of fibonacci numbers set -> ");
         fibonacciCount = scanner.nextInt();
 
         /* adding fibonacci numbers to list */
         fibonacci.add((long) 0);
         fibonacci.add((long) 1);
-        for(int i = 2; i < fibonacciCount; i++) fibonacci.add(fibonacci.get(i - 1) + fibonacci.get(i - 2));
-
+        for(int i = 2; i < fibonacciCount; i++)
+            fibonacci.add(fibonacci.get(i - 1) + fibonacci.get(i - 2));
 
         System.out.println("Fibonacci: " + fibonacci);
 
-        // max fibonacci odd value
-        F1 = getMaxFibonacciOddNumber(fibonacci);
-        // max fibonacci even value
-        F2 = getMaxFibonacciEvenNumber(fibonacci);
+        biggestOdd = getMaxFibonacciOddNumber(fibonacci); // Max Fibonacci odd number
+        biggestEven = getMaxFibonacciEvenNumber(fibonacci); // Max Fibonacci even number
 
-        System.out.println("Max odd number in fibonacci sequence: " + F1);
-        System.out.println("Max even number in fibonacci sequence: " + F2);
+        System.out.println("Max odd number in fibonacci sequence: " + biggestOdd);
+        System.out.println("Max even number in fibonacci sequence: " + biggestEven);
 
+        /* Clear lists for fibonacci odd and even numbers */
         evens.clear();
         odds.clear();
 
-        for(long number : fibonacci)
+        for(long number : fibonacci) {
             if(number % 2 == 0)
                 evens.add(number);
             else
                 odds.add(number);
+        }
 
-        System.out.println("Percentage of odd numbers: " + ((float)odds.size() / fibonacci.size() * 100) + "%");
-        System.out.println("Percentage of even numbers: " + ((float)evens.size() / fibonacci.size() * 100) + "%");
+        float oddsPercentage = (float) odds.size() / fibonacci.size() * 100; // Percentage of odd numbers
+        float evensPercentage = (float) evens.size() / fibonacci.size() * 100; // Percentage of even numbers
+
+        System.out.println("Percentage of odd numbers: " + oddsPercentage + "%");
+        System.out.println("Percentage of even numbers: " + evensPercentage + "%");
     }
 
     /**
-     * Calculates the max odd value in Fibonacci sequence
+     * Calculates the max odd value in Fibonacci sequence.
      * @param numbers list of Fibonacci numbers
      * @return max odd value in Fibonacci sequence
      */
-    private static long getMaxFibonacciOddNumber(List<Long> numbers) {
+    private static long getMaxFibonacciOddNumber(final List<Long> numbers) {
         long result = 0;
         for(int i = numbers.size() - 1; i >= 0; i--)
             if(numbers.get(i) % 2 != 0) {
@@ -107,11 +126,11 @@ public class App {
     }
 
     /**
-     * Calculates the max even value in Fibonacci sequence
+     * Calculates the max even value in Fibonacci sequence.
      * @param numbers list of Fibonacci numbers
      * @return max even value in Fibonacci sequence
      */
-    private static long getMaxFibonacciEvenNumber(List<Long> numbers) {
+    private static long getMaxFibonacciEvenNumber(final List<Long> numbers) {
         long result = 0;
         for(int i = numbers.size() - 1; i >= 0; i--) {
             if(numbers.get(i) % 2 == 0) {

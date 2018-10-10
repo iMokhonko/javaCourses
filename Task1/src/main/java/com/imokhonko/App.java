@@ -6,29 +6,19 @@ import java.util.Scanner;
 
 public class App {
 
-    /**
-     * Sum of even numbers in a range
-     */
+    /* Sum of even numbers in a range. */
     private static int sumOfEvenNumbers = 0;
 
-    /**
-     * Sum of odd numbers in a range.
-     */
+    /* Sum of odd numbers in a range. */
     private static int sumOfOddNumbers = 0;
 
-    /**
-     * List of even numbers in a range.
-     */
+    /* List of even numbers in a range. */
     private static List<Long> evens = new ArrayList<>();
 
-    /**
-     * List of odd numbers in a range.
-     */
+    /* List of odd numbers in a range. */
     private static List<Long> odds = new ArrayList<>();
 
-    /**
-     * List of Fibonacci sequence.
-     */
+    /* List of Fibonacci sequence. */
     private static List<Long> fibonacci = new ArrayList<>();
 
     public static void main(String[] args) {
@@ -74,11 +64,11 @@ public class App {
         System.out.println("\nSum of odd numbers = " + sumOfOddNumbers);
         System.out.println("Sum of even numbers = " + sumOfEvenNumbers);
 
-        /* fibonacci set size */
+        // fibonacci set size
         System.out.print("Enter the size of fibonacci numbers set -> ");
         fibonacciCount = scanner.nextInt();
 
-        /* adding fibonacci numbers to list */
+        // adding fibonacci numbers to list
         fibonacci.add((long) 0);
         fibonacci.add((long) 1);
         for(int i = 2; i < fibonacciCount; i++)
@@ -92,7 +82,7 @@ public class App {
         System.out.println("Max odd number in fibonacci sequence: " + biggestOdd);
         System.out.println("Max even number in fibonacci sequence: " + biggestEven);
 
-        /* Clear lists for fibonacci odd and even numbers */
+        // Clear lists for fibonacci odd and even numbers
         evens.clear();
         odds.clear();
 
@@ -140,5 +130,4 @@ public class App {
         }
         return result;
     }
-
 }

@@ -39,7 +39,7 @@ public class App {
         VehiclesSorting.printYoungVehicles(vehicles, 5);
         System.out.println("_____________________________________________________");
 
-        System.out.println("2. Planes with altitute more then 5000:");
+        System.out.println("2. Planes with altitude more then 5000:");
         VehiclesSorting.printVehiclesWithBiggerAltitude(vehicles, 5000);
         System.out.println("_____________________________________________________");
 
@@ -47,7 +47,7 @@ public class App {
         VehiclesSorting.printVehiclesOlderThanYear(vehicles, 2000);
         System.out.println("_____________________________________________________");
 
-        System.out.println("3. Vehicles (except planes) with speend range 200-500:");
+        System.out.println("3. Vehicles (except planes) with speed range 200-500:");
         VehiclesSorting.printVehiclesSpeedRangeExceptPlane(vehicles, 200, 500);
         System.out.println("_____________________________________________________");
 

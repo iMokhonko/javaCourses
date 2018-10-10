@@ -74,10 +74,8 @@ public class VehiclesSorting {
     public static void printVehiclesWithBiggerAltitude(final List<Vehicle> vehicles, final int altitude) {
         vehicles.stream()
                 .filter(vehicle -> vehicle.getClass() == Plane.class)
-                .filter(vehicle -> {
-                    Plane plane = (Plane) vehicle;
-                    return plane.getMaxAltitude() > altitude;
-                }).forEach(System.out::println);
+                .filter(vehicle -> ((Plane) vehicle).getMaxAltitude() > altitude)
+                .forEach(System.out::println);
     }
 
     /**

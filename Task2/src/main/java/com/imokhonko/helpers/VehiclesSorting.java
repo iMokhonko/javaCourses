@@ -159,4 +159,70 @@ public class VehiclesSorting {
         return swimableVehicles;
     }
 
+    /**
+     * Prints max speed vehicles in Flyable list.
+     * @param vehicles list of Flyable vehicles.
+     */
+    public static void printMaxSpeedFlyableVehicles(final List<Flyable> vehicles) {
+        int maxSpeed = 0;
+
+        // getting the max price from list of vehicles
+        for(Flyable vehicle : vehicles) {
+            if(vehicle instanceof Flyable) {
+                if(((Vehicle) vehicle).getMaxSpeed() > maxSpeed)
+                    maxSpeed = ((Vehicle) vehicle).getMaxSpeed();
+            }
+        }
+
+        final int streamMaxSpeed = maxSpeed;
+
+        vehicles.stream()
+                .filter(vehicle -> ((Vehicle) vehicle).getMaxSpeed() == streamMaxSpeed) // filter vehicle with max speed
+                .forEach(System.out::println);
+    }
+
+    /**
+     * Prints max speed vehicles in Moveable list.
+     * @param vehicles list of Flyable vehicles.
+     */
+    public static void printMaxSpeedMoveableVehicles(final List<Moveable> vehicles) {
+        int maxSpeed = 0;
+
+        // getting the max price from list of vehicles
+        for(Moveable vehicle : vehicles) {
+            if(vehicle instanceof Moveable) {
+                if(((Vehicle) vehicle).getMaxSpeed() > maxSpeed)
+                    maxSpeed = ((Vehicle) vehicle).getMaxSpeed();
+            }
+        }
+
+        final int streamMaxSpeed = maxSpeed;
+
+        vehicles.stream()
+                .filter(vehicle -> ((Vehicle) vehicle).getMaxSpeed() == streamMaxSpeed) // filter vehicle with max speed
+                .forEach(System.out::println);
+    }
+
+    /**
+     * Prints max speed vehicles in Moveable list.
+     * @param vehicles list of Flyable vehicles.
+     */
+    public static void printMaxSpeedSwimableVehicles(final List<Swimable> vehicles) {
+        int maxSpeed = 0;
+
+        // getting the max price from list of vehicles
+        for(Swimable vehicle : vehicles) {
+            if(vehicle instanceof Swimable) {
+                if(((Vehicle) vehicle).getMaxSpeed() > maxSpeed)
+                    maxSpeed = ((Vehicle) vehicle).getMaxSpeed();
+            }
+        }
+
+        final int streamMaxSpeed = maxSpeed;
+
+        vehicles.stream()
+                .filter(vehicle -> ((Vehicle) vehicle).getMaxSpeed() == streamMaxSpeed) // filter vehicle with max speed
+                .forEach(System.out::println);
+    }
+
 }

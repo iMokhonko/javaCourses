@@ -27,27 +27,27 @@ public class App {
     public static void main(String[] args) {
         fillVehicles(vehicles);
 
-        System.out.println("Min price vehicles:");
+        System.out.println("1. Min price vehicles:");
         VehiclesSorting.printMinPriceVehicles(vehicles);
         System.out.println("_____________________________________________________");
 
-        System.out.println("Max speed vehicles: ");
+        System.out.println("1. Max speed vehicles: ");
         VehiclesSorting.printMaxSpeedVehicles(vehicles);
         System.out.println("_____________________________________________________");
 
-        System.out.println("vehicles not older than 5 years:");
+        System.out.println("1. Vehicles not older than 5 years:");
         VehiclesSorting.printYoungVehicles(vehicles, 5);
         System.out.println("_____________________________________________________");
 
-        System.out.println("vehicles with altitute more then 5000:");
+        System.out.println("2. Planes with altitute more then 5000:");
         VehiclesSorting.printVehiclesWithBiggerAltitude(vehicles, 5000);
         System.out.println("_____________________________________________________");
 
-        System.out.println("vehicles with with relase date older than 2000:");
+        System.out.println("2. Planes with release date older than 2000:");
         VehiclesSorting.printVehiclesOlderThanYear(vehicles, 2000);
         System.out.println("_____________________________________________________");
 
-        System.out.println("vehicles (except planes) with speend range 200-500:");
+        System.out.println("3. Vehicles (except planes) with speend range 200-500:");
         VehiclesSorting.printVehiclesSpeedRangeExceptPlane(vehicles, 200, 500);
         System.out.println("_____________________________________________________");
 
@@ -60,14 +60,31 @@ public class App {
         // getting Swimable vehicles
         swimableVehicles = VehiclesSorting.getSwimableVehicles(vehicles);
 
-        System.out.println("Flyable vehicles:");
+        System.out.println("5. Flyable vehicles:");
         flyableVehicles.forEach(System.out::println);
+        System.out.println("_____________________________________________________");
 
-        System.out.println("Moveable vehicles:");
+        System.out.println("5. Moveable vehicles:");
         moveableVehicles.forEach(System.out::println);
+        System.out.println("_____________________________________________________");
 
-        System.out.println("Swimable vehicles:");
+        System.out.println("5. Swimable vehicles:");
         swimableVehicles.forEach(System.out::println);
+        System.out.println("_____________________________________________________");
+
+        System.out.println("6. Flyable max speed vehicles:");
+        VehiclesSorting.printMaxSpeedFlyableVehicles(flyableVehicles);
+        System.out.println("_____________________________________________________");
+
+        System.out.println("6. Moveable max speed vehicles:");
+        VehiclesSorting.printMaxSpeedMoveableVehicles(moveableVehicles);
+        System.out.println("_____________________________________________________");
+
+        System.out.println("6. Swimable max speed vehicles:");
+        VehiclesSorting.printMaxSpeedSwimableVehicles(swimableVehicles);
+        System.out.println("_____________________________________________________");
+
+
     }
 
     /**

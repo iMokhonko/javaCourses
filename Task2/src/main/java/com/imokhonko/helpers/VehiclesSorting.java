@@ -1,10 +1,10 @@
 package com.imokhonko.helpers;
 
-import com.imokhonko.vehicles.Plane;
-import com.imokhonko.vehicles.Vehicle;
-import com.imokhonko.interfaces.Flyable;
-import com.imokhonko.interfaces.Moveable;
-import com.imokhonko.interfaces.Swimable;
+import com.imokhonko.model.Plane;
+import com.imokhonko.model.Vehicle;
+import com.imokhonko.model.interfaces.Flyable;
+import com.imokhonko.model.interfaces.Moveable;
+import com.imokhonko.model.interfaces.Swimable;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -13,20 +13,20 @@ import java.util.List;
 public class VehiclesSorting {
 
     /**
-     * Prints vehicles with min price.
-     * @param vehicles list of vehicles.
+     * Prints model with min price.
+     * @param vehicles list of model.
      */
     public static void printMinPriceVehicles(final List<Vehicle> vehicles) {
         int minPrice = Integer.MAX_VALUE;
 
-        // getting the min price from vehicles list
+        // getting the min price from model list
         for(Vehicle vehicle : vehicles)
             if(vehicle.getPrice() < minPrice)
                 minPrice = vehicle.getPrice();
 
         final int streamMinPrice = minPrice;
 
-//        vehicles.stream()
+//        model.stream()
 //                .min(Comparator.comparing(Vehicle::getPrice));
 
         vehicles.stream()
@@ -35,13 +35,13 @@ public class VehiclesSorting {
     }
 
     /**
-     * Prints vehicles with max price.
-     * @param vehicles list of vehicles.
+     * Prints model with max price.
+     * @param vehicles list of model.
      */
     public static void printMaxSpeedVehicles(final List<Vehicle> vehicles) {
         int maxSpeed = 0;
 
-        // getting the max price from list of vehicles
+        // getting the max price from list of model
         for(Vehicle vehicle : vehicles)
             if(vehicle.getMaxSpeed() > maxSpeed)
                 maxSpeed = vehicle.getMaxSpeed();
@@ -54,8 +54,8 @@ public class VehiclesSorting {
     }
 
     /**
-     * Prints vehicles that has release date not more than maxYears years from current date.
-     * @param vehicles list of vehicles.
+     * Prints model that has release date not more than maxYears years from current date.
+     * @param vehicles list of model.
      * @param maxYears years.
      */
     public static void printYoungVehicles(final List<Vehicle> vehicles, final int maxYears) {
@@ -68,7 +68,7 @@ public class VehiclesSorting {
 
     /**
      * Prints planes with bigger altitude than given altitude.
-     * @param vehicles list of vehicles.
+     * @param vehicles list of model.
      * @param altitude altitude.
      */
     public static void printVehiclesWithBiggerAltitude(final List<Vehicle> vehicles, final int altitude) {
@@ -79,8 +79,8 @@ public class VehiclesSorting {
     }
 
     /**
-     * Prints vehicles older than given year.
-     * @param vehicles list of vehicles.
+     * Prints model older than given year.
+     * @param vehicles list of model.
      * @param year year.
      */
     public static void printVehiclesOlderThanYear(final List<Vehicle> vehicles, final int year) {
@@ -91,8 +91,8 @@ public class VehiclesSorting {
     }
 
     /**
-     * Prints vehicles in speed range.
-     * @param vehicles list of vehicles.
+     * Prints model in speed range.
+     * @param vehicles list of model.
      * @param minSpeedRange min speed range value.
      * @param maxSpeedRange max speed range value.
      */
@@ -107,9 +107,9 @@ public class VehiclesSorting {
     }
 
     /**
-     * Getting Flyable vehicles.
-     * @param vehicles list of all vehicles.
-     * @return list of Flyable vehicles.
+     * Getting Flyable model.
+     * @param vehicles list of all model.
+     * @return list of Flyable model.
      */
     public static List<Flyable> getFlyableVehicles(final List<Vehicle> vehicles) {
         List<Flyable> flyableVehicles = new ArrayList<>();
@@ -124,9 +124,9 @@ public class VehiclesSorting {
     }
 
     /**
-     * Getting Moveable vehicles.
-     * @param vehicles list of all vehicles.
-     * @return list of Moveable vehicles.
+     * Getting Moveable model.
+     * @param vehicles list of all model.
+     * @return list of Moveable model.
      */
     public static List<Moveable> getMoveableVehicles(final List<Vehicle> vehicles) {
         List<Moveable> moveableVehicles = new ArrayList<>();
@@ -141,9 +141,9 @@ public class VehiclesSorting {
     }
 
     /**
-     * Getting Swmiable vehicles.
-     * @param vehicles list of all vehicles.
-     * @return list of Swiamable vehicles.
+     * Getting Swmiable model.
+     * @param vehicles list of all model.
+     * @return list of Swiamable model.
      */
     public static List<Swimable> getSwimableVehicles(final List<Vehicle> vehicles) {
         List<Swimable> swimableVehicles = new ArrayList<>();
@@ -158,13 +158,13 @@ public class VehiclesSorting {
     }
 
     /**
-     * Prints max speed vehicles in Flyable list.
-     * @param vehicles list of Flyable vehicles.
+     * Prints max speed model in Flyable list.
+     * @param vehicles list of Flyable model.
      */
     public static void printMaxSpeedFlyableVehicles(final List<Flyable> vehicles) {
         int maxSpeed = 0;
 
-        // getting the max price from list of vehicles
+        // getting the max price from list of model
         for(Flyable vehicle : vehicles) {
             if(vehicle instanceof Flyable) {
                 if(((Vehicle) vehicle).getMaxSpeed() > maxSpeed)
@@ -180,13 +180,13 @@ public class VehiclesSorting {
     }
 
     /**
-     * Prints max speed vehicles in Moveable list.
-     * @param vehicles list of Flyable vehicles.
+     * Prints max speed model in Moveable list.
+     * @param vehicles list of Flyable model.
      */
     public static void printMaxSpeedMoveableVehicles(final List<Moveable> vehicles) {
         int maxSpeed = 0;
 
-        // getting the max price from list of vehicles
+        // getting the max price from list of model
         for(Moveable vehicle : vehicles) {
             if(vehicle instanceof Moveable) {
                 if(((Vehicle) vehicle).getMaxSpeed() > maxSpeed)
@@ -202,13 +202,13 @@ public class VehiclesSorting {
     }
 
     /**
-     * Prints max speed vehicles in Moveable list.
-     * @param vehicles list of Flyable vehicles.
+     * Prints max speed model in Moveable list.
+     * @param vehicles list of Flyable model.
      */
     public static void printMaxSpeedSwimableVehicles(final List<Swimable> vehicles) {
         int maxSpeed = 0;
 
-        // getting the max price from list of vehicles
+        // getting the max price from list of model
         for(Swimable vehicle : vehicles) {
             if(vehicle instanceof Swimable) {
                 if(((Vehicle) vehicle).getMaxSpeed() > maxSpeed)

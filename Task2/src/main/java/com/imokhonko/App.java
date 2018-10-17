@@ -1,37 +1,36 @@
 package com.imokhonko;
 
 import com.imokhonko.helpers.VehiclesSorting;
-import com.imokhonko.vehicles.*;
-import com.imokhonko.interfaces.Flyable;
-import com.imokhonko.interfaces.Moveable;
-import com.imokhonko.interfaces.Swimable;
+import com.imokhonko.model.*;
+import com.imokhonko.model.interfaces.Flyable;
+import com.imokhonko.model.interfaces.Moveable;
+import com.imokhonko.model.interfaces.Swimable;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class App {
 
-    /* List of vehicles */
-    private static List<Vehicle> vehicles = new ArrayList<>();
-
-    /* List of Flyable vehicles */
-    private static List<Flyable> flyableVehicles = new ArrayList<>();
-
-    /* List of Moveable vehicles */
-    private static List<Moveable> moveableVehicles = new ArrayList<>();
-
-    /* List of Swimable vehicles */
-    private static List<Swimable> swimableVehicles = new ArrayList<>();
-
-
     public static void main(String[] args) {
+        /* List of model */
+        List<Vehicle> vehicles = new ArrayList<>();
+
+        /* List of Flyable model */
+        List<Flyable> flyableVehicles = new ArrayList<>();
+
+        /* List of Moveable model */
+        List<Moveable> moveableVehicles = new ArrayList<>();
+
+        /* List of Swimable model */
+        List<Swimable> swimableVehicles = new ArrayList<>();
+
         fillVehicles(vehicles);
 
-        System.out.println("1. Min price vehicles:");
+        System.out.println("1. Min price model:");
         VehiclesSorting.printMinPriceVehicles(vehicles);
         System.out.println("_____________________________________________________");
 
-        System.out.println("1. Max speed vehicles: ");
+        System.out.println("1. Max speed model: ");
         VehiclesSorting.printMaxSpeedVehicles(vehicles);
         System.out.println("_____________________________________________________");
 
@@ -51,36 +50,36 @@ public class App {
         VehiclesSorting.printVehiclesSpeedRangeExceptPlane(vehicles, 200, 500);
         System.out.println("_____________________________________________________");
 
-        // getting Flyable vehicles
+        // getting Flyable model
         flyableVehicles = VehiclesSorting.getFlyableVehicles(vehicles);
 
-        // getting Moveable vehicles
+        // getting Moveable model
         moveableVehicles = VehiclesSorting.getMoveableVehicles(vehicles);
 
-        // getting Swimable vehicles
+        // getting Swimable model
         swimableVehicles = VehiclesSorting.getSwimableVehicles(vehicles);
 
-        System.out.println("5. Flyable vehicles:");
+        System.out.println("5. Flyable model:");
         flyableVehicles.forEach(System.out::println);
         System.out.println("_____________________________________________________");
 
-        System.out.println("5. Moveable vehicles:");
+        System.out.println("5. Moveable model:");
         moveableVehicles.forEach(System.out::println);
         System.out.println("_____________________________________________________");
 
-        System.out.println("5. Swimable vehicles:");
+        System.out.println("5. Swimable model:");
         swimableVehicles.forEach(System.out::println);
         System.out.println("_____________________________________________________");
 
-        System.out.println("6. Flyable max speed vehicles:");
+        System.out.println("6. Flyable max speed model:");
         VehiclesSorting.printMaxSpeedFlyableVehicles(flyableVehicles);
         System.out.println("_____________________________________________________");
 
-        System.out.println("6. Moveable max speed vehicles:");
+        System.out.println("6. Moveable max speed model:");
         VehiclesSorting.printMaxSpeedMoveableVehicles(moveableVehicles);
         System.out.println("_____________________________________________________");
 
-        System.out.println("6. Swimable max speed vehicles:");
+        System.out.println("6. Swimable max speed model:");
         VehiclesSorting.printMaxSpeedSwimableVehicles(swimableVehicles);
         System.out.println("_____________________________________________________");
 
@@ -88,8 +87,8 @@ public class App {
     }
 
     /**
-     * Filling list of vehicles.
-     * @param vehicles list of vehicles to fill.
+     * Filling list of model.
+     * @param vehicles list of model to fill.
      */
     private static void fillVehicles(List<Vehicle> vehicles) {
         vehicles.add(new Car.Builder()

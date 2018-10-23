@@ -14,10 +14,15 @@ public abstract class Vehicle {
     /* Vehicle release date */
     private final int releaseDate;
 
-    public Vehicle(int price, int speed, int releaseDate) {
+    public Vehicle(int price, int speed, int releaseDate, Point coordinates) {
         this.price = price;
         this.maxSpeed = speed;
         this.releaseDate = releaseDate;
+        this.coordinates = coordinates;
+    }
+
+    public Vehicle(int price, int speed, int releaseDate) {
+        this(price, speed, releaseDate, new Point(0,0));
     }
 
     public void setCoordinates(Point coordinates) {

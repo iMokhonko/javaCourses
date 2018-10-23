@@ -6,7 +6,7 @@ import com.imokhonko.model.interfaces.Swimable;
 public class AmphibianCar extends Vehicle
         implements Swimable, Moveable {
 
-    public static class Builder implements javafx.util.Builder<AmphibianCar> {
+    public static class Builder {
         private Point coordinates;
         private int price;
         private int maxSpeed;
@@ -43,8 +43,7 @@ public class AmphibianCar extends Vehicle
     }
 
     private AmphibianCar(Builder builder) {
-        super(builder.price, builder.maxSpeed, builder.releaseDate);
-        this.setCoordinates(builder.coordinates);
+        super(builder.price, builder.maxSpeed, builder.releaseDate, builder.coordinates);
     }
 
     @Override

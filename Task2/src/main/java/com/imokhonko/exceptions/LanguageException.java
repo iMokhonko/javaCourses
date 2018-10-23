@@ -1,6 +1,6 @@
 package com.imokhonko.exceptions;
 
-public class LanguageException extends Exception {
+public abstract class LanguageException extends Exception {
 
     public LanguageException() {
         super();

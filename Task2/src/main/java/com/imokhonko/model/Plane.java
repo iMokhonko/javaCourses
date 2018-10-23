@@ -9,7 +9,7 @@ public class Plane extends Vehicle implements Flyable {
     /* Max passengers count in the plane */
     private final int passengersCount;
 
-    public static class Builder implements javafx.util.Builder<Plane> {
+    public static class Builder {
         private Point coordinates;
         private int price;
         private int maxSpeed;
@@ -58,8 +58,7 @@ public class Plane extends Vehicle implements Flyable {
     }
 
     private Plane(Builder builder) {
-        super(builder.price, builder.maxSpeed, builder.releaseDate);
-        this.setCoordinates(builder.coordinates);
+        super(builder.price, builder.maxSpeed, builder.releaseDate, builder.coordinates);
         this.maxAltitude = builder.maxAltitude;
         this.passengersCount = builder.passengersCount;
     }

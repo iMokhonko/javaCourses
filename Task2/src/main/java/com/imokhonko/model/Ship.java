@@ -7,7 +7,7 @@ public class Ship extends Vehicle implements Swimable {
     /* Port where ship registered */
     private final String port;
 
-    public static class Builder implements javafx.util.Builder<Ship> {
+    public static class Builder {
         private Point coordinates;
         private int price;
         private int maxSpeed;
@@ -50,8 +50,7 @@ public class Ship extends Vehicle implements Swimable {
     }
 
     private Ship(Builder builder) {
-        super(builder.price, builder.maxSpeed, builder.releaseDate);
-        this.setCoordinates(builder.coordinates);
+        super(builder.price, builder.maxSpeed, builder.releaseDate, builder.coordinates);
         this.port = builder.port;
     }
 

@@ -1,6 +1,6 @@
 package com.imokhonko.exceptions;
 
-public class VehicleException extends Exception {
+public abstract class VehicleException extends Exception {
 
     public VehicleException() {
         super();

@@ -7,7 +7,7 @@ import com.imokhonko.model.interfaces.Swimable;
 public class Batmobile extends Vehicle
         implements Flyable, Moveable, Swimable {
 
-    public static class Builder implements javafx.util.Builder<Batmobile> {
+    public static class Builder {
         private Point coordinates;
         private int price;
         private int maxSpeed;
@@ -44,8 +44,7 @@ public class Batmobile extends Vehicle
     }
 
     private Batmobile(Builder builder) {
-        super(builder.price, builder.maxSpeed, builder.releaseDate);
-        this.setCoordinates(builder.coordinates);
+        super(builder.price, builder.maxSpeed, builder.releaseDate, builder.coordinates);
     }
 
     @Override

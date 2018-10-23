@@ -4,7 +4,7 @@ import com.imokhonko.model.interfaces.Moveable;
 
 public class Car extends Vehicle implements Moveable {
 
-    public static class Builder implements javafx.util.Builder<Car> {
+    public static class Builder {
         private Point coordinates;
         private int price;
         private int maxSpeed;
@@ -41,8 +41,7 @@ public class Car extends Vehicle implements Moveable {
     }
 
     private Car(Builder builder) {
-        super(builder.price, builder.maxSpeed, builder.releaseDate);
-        this.setCoordinates(builder.coordinates);
+        super(builder.price, builder.maxSpeed, builder.releaseDate, builder.coordinates);
     }
 
     @Override

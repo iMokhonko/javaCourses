@@ -81,12 +81,14 @@ public class VehiclesFilteringTest {
     @Test(expected = VehiclesEmptyListException.class)
     public void getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException() {
         List<Vehicle> vehiclesEmptyList = new ArrayList<>();
-        List<Vehicle> actual = VehiclesFiltering.getMinPriceVehicles(vehiclesEmptyList);
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
+        List<Vehicle> actual = vehiclesFiltering.getMinPriceVehicles(vehiclesEmptyList);
     }
 
     @Test
     public void getMinPriceVehicles_oneMinPriceVehicle_returnListOfOneVehicle() {
-        List<Vehicle> list = VehiclesFiltering.getMinPriceVehicles(vehicles);
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
+        List<Vehicle> list = vehiclesFiltering.getMinPriceVehicles(vehicles);
 
         int actualSize = list.size();
         int expectedSize = 1;
@@ -97,12 +99,14 @@ public class VehiclesFilteringTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void getYoungVehicles_NegativeMaxYearsValue_throwsIllegalArgumentException() {
-        VehiclesFiltering.getYoungVehicles(vehicles, -1);
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
+        vehiclesFiltering.getYoungVehicles(vehicles, -1);
     }
 
     @Test
     public void getYoungVehicles_oneYearOldVehicles_returnsListOfOneVehicle() {
-        List<Vehicle> list = VehiclesFiltering.getYoungVehicles(vehicles, 1);
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
+        List<Vehicle> list = vehiclesFiltering.getYoungVehicles(vehicles, 1);
 
         int actualSize = list.size();
         int expectedSize = 1;
@@ -113,7 +117,8 @@ public class VehiclesFilteringTest {
 
     @Test
     public void getVehiclesWithHigherAltitude_maxAltitudeVehicles_returnListOfTwoVehicles() {
-        List<Vehicle> list = VehiclesFiltering.getVehiclesWithHigherAltitude(vehicles, 2000);
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
+        List<Vehicle> list = vehiclesFiltering.getVehiclesWithHigherAltitude(vehicles, 2000);
 
         int actualSize = list.size();
         int expectedSize = 2;
@@ -123,7 +128,8 @@ public class VehiclesFilteringTest {
 
     @Test
     public void getVehiclesOlderThanYear_olderThan2016Year_returnListOfOneVehicle() {
-        List<Vehicle> list = VehiclesFiltering.getVehiclesOlderThanYear(vehicles, 2016);
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
+        List<Vehicle> list = vehiclesFiltering.getVehiclesOlderThanYear(vehicles, 2016);
 
         int actualSize = list.size();
         int expectedSize = 1;
@@ -133,7 +139,8 @@ public class VehiclesFilteringTest {
 
     @Test
     public void getVehiclesSpeedRangeExceptPlane_from200To600_returnListOfOneVehicle() {
-        List<Vehicle> list = VehiclesFiltering.getVehiclesSpeedRangeExceptPlane(vehicles, 200, 500);
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
+        List<Vehicle> list = vehiclesFiltering.getVehiclesSpeedRangeExceptPlane(vehicles, 200, 500);
 
         int actualSize = list.size();
         int expectedSize = 1;
@@ -143,13 +150,15 @@ public class VehiclesFilteringTest {
 
     @Test
     public void getFlyableVehicles_getListOfFlyableVehicles_returnListOfFlyableVehicles() throws VehicleNotFoundException {
-        List<Flyable> list = VehiclesFiltering.getFlyableVehicles(vehicles);
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
+        List<Flyable> list = vehiclesFiltering.getFlyableVehicles(vehicles);
 
         Assert.assertTrue(list.get(0) instanceof Flyable);
     }
 
     @Test(expected = VehicleNotFoundException.class)
     public void getFlyableVehicles_getEmptyListOfFlyableVehicles_throwsVehicleNotFoundException() throws VehicleNotFoundException {
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
         List<Vehicle> listWithoutFlyable = new ArrayList<>();
         listWithoutFlyable.add(new Ship.Builder()
                 .coordinates(new Point(17,55))
@@ -159,18 +168,20 @@ public class VehiclesFilteringTest {
                 .port("Kiev port")
                 .build());
 
-        VehiclesFiltering.getFlyableVehicles(listWithoutFlyable);
+        vehiclesFiltering.getFlyableVehicles(listWithoutFlyable);
     }
 
     @Test
     public void getMoveableVehicles_getListOfMoveableVehicles_returnListOfMoveableVehicles() throws VehicleNotFoundException {
-        List<Moveable> list = VehiclesFiltering.getMoveableVehicles(vehicles);
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
+        List<Moveable> list = vehiclesFiltering.getMoveableVehicles(vehicles);
 
         Assert.assertTrue(list.get(0) instanceof Moveable);
     }
 
     @Test(expected = VehicleNotFoundException.class)
     public void getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException() throws VehicleNotFoundException {
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
         List<Vehicle> listWithoutFlyable = new ArrayList<>();
         listWithoutFlyable.add(new Ship.Builder()
                 .coordinates(new Point(17,55))
@@ -180,18 +191,20 @@ public class VehiclesFilteringTest {
                 .port("Kiev port")
                 .build());
 
-        VehiclesFiltering.getFlyableVehicles(listWithoutFlyable);
+        vehiclesFiltering.getFlyableVehicles(listWithoutFlyable);
     }
 
     @Test
     public void getSwimableVehicles_getListOfSwimableVehicles_returnListOfSwimableVehicles() throws VehicleNotFoundException {
-        List<Swimable> list = VehiclesFiltering.getSwimableVehicles(vehicles);
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
+        List<Swimable> list = vehiclesFiltering.getSwimableVehicles(vehicles);
 
         Assert.assertTrue(list.get(0) instanceof Swimable);
     }
 
     @Test(expected = VehicleNotFoundException.class)
     public void getSwimableVehicles_getListOfSwimableVehicles_throwsVehicleNotFoundException() throws VehicleNotFoundException {
+        VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
         List<Vehicle> listWithoutFlyable = new ArrayList<>();
         listWithoutFlyable.add(new Plane.Builder().coordinates(new Point(7,5))
                 .maxSpeed(2500)
@@ -201,7 +214,7 @@ public class VehiclesFilteringTest {
                 .passengersCount(150)
                 .build());
 
-        VehiclesFiltering.getSwimableVehicles(listWithoutFlyable);
+        vehiclesFiltering.getSwimableVehicles(listWithoutFlyable);
     }
-    
+
 }

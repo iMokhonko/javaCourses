@@ -1,6 +1,6 @@
 package com.imokhonko.view;
 
-import com.imokhonko.controller.VehiclesController;
+import com.imokhonko.controller.*;
 import com.imokhonko.model.Vehicle;
 
 import java.util.List;
@@ -10,10 +10,10 @@ import java.util.Scanner;
 
 public class ConsoleView {
 
-    private static Locale locale = new Locale("en", "US");
-    private static ResourceBundle rb = ResourceBundle.getBundle("language", locale);
+    private Locale locale = new Locale("en", "US");
+    private ResourceBundle rb = ResourceBundle.getBundle("language", locale);
 
-    public static void printMainMenu() {
+    public void printMainMenu() {
         System.out.println("1. " + rb.getString("getAllVehiclesMenuItems"));
         System.out.println("2. " + rb.getString("filterVehiclesMenuItem"));
         System.out.println("3. " + rb.getString("settingsMenuItem"));
@@ -25,22 +25,25 @@ public class ConsoleView {
 
         switch(menuItem) {
             case 1: {
+                Controller settingsController = new AllVehiclesList();
+                settingsController.processRequest();
                 makeSpace(1);
-                printVehicles(VehiclesController.getAllVehicles());
             } break;
             case 2: {
                 makeSpace(1);
-                printSortingMenu();
+                Controller filterMenu = new FilterMenu();
+                filterMenu.processRequest();
             } break;
             case 3: {
                 makeSpace(1);
-                printSettingsMenu();
+                Controller settingsController = new SettingsMenu();
+                settingsController.processRequest();
             } break;
         }
 
     }
 
-    public static void printSettingsMenu() {
+    public void printSettingsMenu() {
         System.out.println("1. Change language");
         System.out.println("2. Back to main menu");
 
@@ -61,7 +64,7 @@ public class ConsoleView {
         }
     }
 
-    private static void printLanguageMenu() {
+    private void printLanguageMenu() {
         System.out.println("1. English");
         System.out.println("2. Russian");
         System.out.println("3. Ukrainian");
@@ -85,20 +88,62 @@ public class ConsoleView {
             } break;
             case 4: {
                 makeSpace(1);
-                printSettingsMenu();
+                Controller settingsController = new SettingsMenu();
+                settingsController.processRequest();
             } break;
             case 5: {
                 makeSpace(1);
-                printMainMenu();
+                Controller mainMenu = new MainMenu();
+                mainMenu.processRequest();
             } break;
         }
     }
 
-    public static void printVehicles(List<Vehicle> vehicles) {
+    public <T> void printVehicles(List<T> vehicles) {
         vehicles.forEach(System.out::println);
+
+        makeSpace(1);
+        System.out.println("1. Back to main menu");
+        Scanner scanner = new Scanner(System.in);
+        printUserMenuChoose();
+        int menuItem = scanner.nextInt();
+
+        switch(menuItem) {
+            case 1: {
+                makeSpace(1);
+                Controller mainMenu = new MainMenu();
+                mainMenu.processRequest();
+            }
+            break;
+        }
     }
 
-    public static void printSortingMenu() {
+    public <T> void printFilteredVehicles(List<T> vehicles) {
+        vehicles.forEach(System.out::println);
+
+        makeSpace(1);
+        System.out.println("1. Back filter menu");
+        System.out.println("2. Back to main menu");
+        Scanner scanner = new Scanner(System.in);
+        printUserMenuChoose();
+        int menuItem = scanner.nextInt();
+
+        switch(menuItem) {
+            case 1: {
+                makeSpace(1);
+                Controller filterMenu = new FilterMenu();
+                filterMenu.processRequest();
+            }
+            case 2: {
+                makeSpace(1);
+                Controller mainMenu = new MainMenu();
+                mainMenu.processRequest();
+            }
+            break;
+        }
+    }
+
+    public void printSortingMenu() {
         System.out.println("1. Vehicles with min price");
         System.out.println("2. Vehicles with altitude higher than 5000");
         System.out.println("3. Vehicles with speed range from 200 to 500");
@@ -111,31 +156,39 @@ public class ConsoleView {
 
         switch(menuItem) {
             case 1: {
-
+                makeSpace(1);
+                Controller filteredVehicles = new FilteredVehicles("minPriceVehicls");
+                filteredVehicles.processRequest();
             } break;
             case 2: {
-
+                makeSpace(1);
+                Controller filteredVehicles = new FilteredVehicles("higherAltitudeVehicles");
+                filteredVehicles.processRequest();
             } break;
             case 3: {
-
+                makeSpace(1);
+                Controller filteredVehicles = new FilteredVehicles("speedRangeVehicles");
+                filteredVehicles.processRequest();
             } break;
             case 4: {
                 makeSpace(1);
-
+                Controller filteredVehicles = new FilteredVehicles("flyableVehicles");
+                filteredVehicles.processRequest();
             } break;
             case 5: {
                 makeSpace(1);
-                printMainMenu();
+                Controller mainMenu = new MainMenu();
+                mainMenu.processRequest();
             } break;
         }
     }
 
-    private static void makeSpace(int lines) {
+    private void makeSpace(int lines) {
         for(int i = 0; i < lines; i++)
             System.out.println();
     }
 
-    private static void printUserMenuChoose() {
+    private void printUserMenuChoose() {
         System.out.print("Enter the menu number -> ");
     }
 

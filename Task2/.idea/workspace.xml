@@ -23,8 +23,8 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="70" column="24" selection-start-line="64" selection-start-column="21" selection-end-line="70" selection-end-column="24" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,23 +32,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehiclesFiltering.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/model/helpers/VehiclesFiltering.java">
+      <file leaf-file-name="ConsoleView.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/view/ConsoleView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="177" selection-start-line="177" selection-end-line="177" />
+            <state relative-caret-position="112">
+              <caret line="104" column="21" lean-forward="true" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4087#4088#0" expanded="true" />
+                <element signature="e#4148#4149#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehiclesFilteringTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/imokhonko/model/helpers/VehiclesFilteringTest.java">
+      <file leaf-file-name="FilteredVehicles.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/FilteredVehicles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="205" column="4" selection-start-line="205" selection-start-column="4" selection-end-line="205" selection-end-column="4" />
+            <state relative-caret-position="401">
+              <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,21 +65,14 @@
       <list>
         <option value="Interface" />
         <option value="XML Properties File" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/Vehicles/Ship.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/Vehicles/Car.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/Vehicles/Vehicle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/Vehicles/Plane.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/Helpers/VehiclesSorting.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/tasks/TaskOne.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/text_ua_UA.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/text_en_US.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/text.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/text_be_BY.properties" />
@@ -115,13 +110,20 @@
         <option value="$PROJECT_DIR$/src/main/resources/language_ru_RU.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/exceptions/VehiclesEmptyListException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/helpers/VehiclesSorting.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/view/ConsoleView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/model/helpers/VehiclesSorting.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/model/helpers/VehiclesProcessing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/VehiclesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/SettingsMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/AllVehiclesList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/model/helpers/VehiclesFiller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/model/helpers/VehiclesFiltering.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/imokhonko/model/helpers/VehiclesFilteringTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/FilterMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/FilteredVehicles.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/view/ConsoleView.java" />
       </list>
     </option>
   </component>
@@ -216,34 +218,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="imokhonko" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="taskTwo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Task2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="imokhonko" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="taskTwo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Task2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="imokhonko" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="taskTwo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Task2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="imokhonko" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -314,7 +288,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VehiclesFilteringTest">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.imokhonko.App" />
+      <module name="Task2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imokhonko.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -332,29 +317,6 @@
       <option name="MAIN_CLASS_NAME" value="com.imokhonko.model.helpers.VehiclesFilteringTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="VehiclesFilteringTest.getFlyableVehicles_getEmptyListOfFlyableVehicles_throwsVehicleNotFoundException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Task2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.imokhonko.model.helpers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.imokhonko.model.helpers" />
-      <option name="MAIN_CLASS_NAME" value="com.imokhonko.model.helpers.VehiclesFilteringTest" />
-      <option name="METHOD_NAME" value="getFlyableVehicles_getEmptyListOfFlyableVehicles_throwsVehicleNotFoundException" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -472,19 +434,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.VehiclesFilteringTest.getFlyableVehicles_getEmptyListOfFlyableVehicles_throwsVehicleNotFoundException" />
       <item itemvalue="JUnit.VehiclesFilteringTest.getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException" />
       <item itemvalue="JUnit.VehiclesFilteringTest.getSwimableVehicles" />
       <item itemvalue="JUnit.VehiclesFilteringTest.getSwimableVehicles_getListOfSwimableVehicles_throwsVehicleNotFoundException" />
       <item itemvalue="JUnit.VehiclesFilteringTest" />
+      <item itemvalue="Application.App" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.VehiclesFilteringTest" />
         <item itemvalue="JUnit.VehiclesFilteringTest.getSwimableVehicles_getListOfSwimableVehicles_throwsVehicleNotFoundException" />
         <item itemvalue="JUnit.VehiclesFilteringTest.getSwimableVehicles" />
         <item itemvalue="JUnit.VehiclesFilteringTest.getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException" />
-        <item itemvalue="JUnit.VehiclesFilteringTest.getFlyableVehicles_getEmptyListOfFlyableVehicles_throwsVehicleNotFoundException" />
       </list>
     </recent_temporary>
   </component>
@@ -506,20 +468,11 @@
       <workItem from="1540195309042" duration="1070000" />
       <workItem from="1540223615571" duration="10090000" />
       <workItem from="1540315414238" duration="6726000" />
-      <workItem from="1540323601378" duration="1244000" />
+      <workItem from="1540323601378" duration="4995000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VehiclesFilteringTest_getVehiclesSpeedRangeExceptPlane_from200To600_returnListOfOneVehicle - 2018.10.23 at 21h 59m 17s.xml">
-      <configuration name="VehiclesFilteringTest.getVehiclesSpeedRangeExceptPlane_from200To600_returnListOfOneVehicle" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehiclesFilteringTest_getFlyableVehicles_getEmptyListOfFlyableVehicles_throwsVehicleNotFoundException - 2018.10.23 at 22h 03m 01s.xml">
-      <configuration name="VehiclesFilteringTest.getFlyableVehicles_getEmptyListOfFlyableVehicles_throwsVehicleNotFoundException" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehiclesFilteringTest_getFlyableVehicles_getEmptyListOfFlyableVehicles_throwsVehicleNotFoundException - 2018.10.23 at 22h 04m 10s.xml">
-      <configuration name="VehiclesFilteringTest.getFlyableVehicles_getEmptyListOfFlyableVehicles_throwsVehicleNotFoundException" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VehiclesFilteringTest_getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException - 2018.10.23 at 22h 07m 42s.xml">
       <configuration name="VehiclesFilteringTest.getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException" configurationId="JUnit" />
     </history-entry>
@@ -541,44 +494,53 @@
     <history-entry file="VehiclesFilteringTest - 2018.10.23 at 23h 00m 27s.xml">
       <configuration name="VehiclesFilteringTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VehiclesFilteringTest - 2018.10.23 at 23h 13m 14s.xml">
+      <configuration name="VehiclesFilteringTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehiclesFilteringTest - 2018.10.23 at 23h 45m 52s.xml">
+      <configuration name="VehiclesFilteringTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehiclesFilteringTest - 2018.10.23 at 23h 53m 10s.xml">
+      <configuration name="VehiclesFilteringTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44433000" />
+    <option name="totallyTimeSpent" value="48184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32673267" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32972136" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32980332" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3630363" />
-      <window_info anchor="bottom" id="CheckStyle" order="7" weight="0.32972136" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2806354" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39768976" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32673267" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3630363" />
+      <window_info anchor="bottom" id="CheckStyle" order="7" weight="0.32972136" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2806354" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32673267" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39768976" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32817337" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
@@ -625,153 +587,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/text_en_US.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/text.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/mvctest/model/Student.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/mvctest/view/StudentConsoleView.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/mvctest/controller/StudentController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/mvctest/MVCMain.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/Test.java" />
-    <entry file="uml://JAVA/java.lang">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.lang</OriginalElement>
-          <nodes>
-            <node x="" y="">java.lang.Float</node>
-            <node x="" y="">java.lang.IndexOutOfBoundsException</node>
-            <node x="" y="">java.lang.Override</node>
-            <node x="" y="">java.lang.ApplicationShutdownHooks</node>
-            <node x="" y="">java.lang.System</node>
-            <node x="" y="">java.lang.ClassLoaderHelper</node>
-            <node x="" y="">java.lang.AbstractMethodError</node>
-            <node x="" y="">java.lang.ThreadGroup</node>
-            <node x="" y="">java.lang.Integer</node>
-            <node x="" y="">java.lang.CharacterData0E</node>
-            <node x="" y="">java.lang.CloneNotSupportedException</node>
-            <node x="" y="">java.lang.Terminator</node>
-            <node x="" y="">java.lang.ref</node>
-            <node x="" y="">java.lang.instrument</node>
-            <node x="" y="">java.lang.NoSuchFieldException</node>
-            <node x="" y="">java.lang.Character</node>
-            <node x="" y="">java.lang.Long</node>
-            <node x="" y="">java.lang.Thread</node>
-            <node x="" y="">java.lang.InternalError</node>
-            <node x="" y="">java.lang.CharacterData01</node>
-            <node x="" y="">java.lang.ArithmeticException</node>
-            <node x="" y="">java.lang.CharacterData02</node>
-            <node x="" y="">java.lang.InheritableThreadLocal</node>
-            <node x="" y="">java.lang.StrictMath</node>
-            <node x="" y="">java.lang.SystemClassLoaderAction</node>
-            <node x="" y="">java.lang.reflect</node>
-            <node x="" y="">java.lang.Void</node>
-            <node x="" y="">java.lang.ClassCircularityError</node>
-            <node x="" y="">java.lang.Compiler</node>
-            <node x="" y="">java.lang.LinkageError</node>
-            <node x="" y="">java.lang.CharSequence</node>
-            <node x="" y="">java.lang.SuppressWarnings</node>
-            <node x="" y="">java.lang.CharacterData00</node>
-            <node x="" y="">java.lang.AssertionStatusDirectives</node>
-            <node x="" y="">java.lang.Runtime</node>
-            <node x="" y="">java.lang.StringIndexOutOfBoundsException</node>
-            <node x="" y="">java.lang.Exception</node>
-            <node x="" y="">java.lang.ThreadDeath</node>
-            <node x="" y="">java.lang.RuntimePermission</node>
-            <node x="" y="">java.lang.StringBuilder</node>
-            <node x="" y="">java.lang.ClassLoader</node>
-            <node x="" y="">java.lang.CharacterDataUndefined</node>
-            <node x="" y="">java.lang.Throwable</node>
-            <node x="" y="">java.lang.StackOverflowError</node>
-            <node x="" y="">java.lang.Double</node>
-            <node x="" y="">java.lang.TypeNotPresentException</node>
-            <node x="" y="">java.lang.annotation</node>
-            <node x="" y="">java.lang.Error</node>
-            <node x="" y="">java.lang.ProcessImpl</node>
-            <node x="" y="">java.lang.ReflectiveOperationException</node>
-            <node x="" y="">java.lang.AssertionError</node>
-            <node x="" y="">java.lang.ClassCastException</node>
-            <node x="" y="">java.lang.VerifyError</node>
-            <node x="" y="">java.lang.IllegalMonitorStateException</node>
-            <node x="" y="">java.lang.VirtualMachineError</node>
-            <node x="" y="">java.lang.StringBuffer</node>
-            <node x="" y="">java.lang.UnknownError</node>
-            <node x="" y="">java.lang.StackTraceElement</node>
-            <node x="" y="">java.lang.String</node>
-            <node x="" y="">java.lang.Number</node>
-            <node x="" y="">java.lang.NegativeArraySizeException</node>
-            <node x="" y="">java.lang.UnsupportedOperationException</node>
-            <node x="" y="">java.lang.SafeVarargs</node>
-            <node x="" y="">java.lang.IncompatibleClassChangeError</node>
-            <node x="" y="">java.lang.Deprecated</node>
-            <node x="" y="">java.lang.NoSuchMethodError</node>
-            <node x="" y="">java.lang.NumberFormatException</node>
-            <node x="" y="">java.lang.RuntimeException</node>
-            <node x="" y="">java.lang.ArrayIndexOutOfBoundsException</node>
-            <node x="" y="">java.lang.ConditionalSpecialCasing</node>
-            <node x="" y="">java.lang.ClassFormatError</node>
-            <node x="" y="">java.lang.Comparable</node>
-            <node x="" y="">java.lang.ClassNotFoundException</node>
-            <node x="" y="">java.lang.OutOfMemoryError</node>
-            <node x="" y="">java.lang.ExceptionInInitializerError</node>
-            <node x="" y="">java.lang.IllegalStateException</node>
-            <node x="" y="">java.lang.NoSuchMethodException</node>
-            <node x="" y="">java.lang.UnsupportedClassVersionError</node>
-            <node x="" y="">java.lang.AutoCloseable</node>
-            <node x="" y="">java.lang.Runnable</node>
-            <node x="" y="">java.lang.NullPointerException</node>
-            <node x="" y="">java.lang.NoSuchFieldError</node>
-            <node x="" y="">java.lang.Enum</node>
-            <node x="" y="">java.lang.Short</node>
-            <node x="" y="">java.lang.Readable</node>
-            <node x="" y="">java.lang.InstantiationException</node>
-            <node x="" y="">java.lang.Math</node>
-            <node x="" y="">java.lang.SecurityException</node>
-            <node x="" y="">java.lang.StringCoding</node>
-            <node x="" y="">java.lang.Byte</node>
-            <node x="" y="">java.lang.IllegalAccessException</node>
-            <node x="" y="">java.lang.Cloneable</node>
-            <node x="" y="">java.lang.ThreadLocal</node>
-            <node x="" y="">java.lang.ProcessEnvironment</node>
-            <node x="" y="">java.lang.Process</node>
-            <node x="" y="">java.lang.CharacterDataLatin1</node>
-            <node x="" y="">java.lang.IllegalAccessError</node>
-            <node x="" y="">java.lang.BootstrapMethodError</node>
-            <node x="" y="">java.lang.ArrayStoreException</node>
-            <node x="" y="">java.lang.CharacterName</node>
-            <node x="" y="">java.lang.Iterable</node>
-            <node x="" y="">java.lang.FunctionalInterface</node>
-            <node x="" y="">java.lang.EnumConstantNotPresentException</node>
-            <node x="" y="">java.lang.AbstractStringBuilder</node>
-            <node x="" y="">java.lang.Boolean</node>
-            <node x="" y="">java.lang.invoke</node>
-            <node x="" y="">java.lang.CharacterData</node>
-            <node x="" y="">java.lang.ProcessBuilder</node>
-            <node x="" y="">java.lang.NoClassDefFoundError</node>
-            <node x="" y="">java.lang.Shutdown</node>
-            <node x="" y="">java.lang.IllegalThreadStateException</node>
-            <node x="" y="">java.lang.management</node>
-            <node x="" y="">java.lang.Package</node>
-            <node x="" y="">java.lang.Appendable</node>
-            <node x="" y="">java.lang.IllegalArgumentException</node>
-            <node x="" y="">java.lang.SecurityManager</node>
-            <node x="" y="">java.lang.CharacterDataPrivateUse</node>
-            <node x="" y="">java.lang.InterruptedException</node>
-            <node x="" y="">java.lang.InstantiationError</node>
-            <node x="" y="">java.lang.ClassValue</node>
-            <node x="" y="">java.lang.Class</node>
-            <node x="" y="">java.lang.Object</node>
-            <node x="" y="">java.lang.UnsatisfiedLinkError</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.9950537218081501" x="5583.0" y="478.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/kek.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/language_en_US.properties">
       <provider selected="true" editor-type-id="text-editor" />
@@ -816,6 +631,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding>
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -914,6 +733,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="405" column="24" selection-start-line="405" selection-start-column="24" selection-end-line="405" selection-end-column="24" />
+          <folding>
+            <element signature="e#15397#15398#0" expanded="true" />
+            <element signature="e#15443#15444#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -981,6 +804,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding>
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -995,23 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="806" column="12" selection-start-line="806" selection-start-column="12" selection-end-line="806" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/view/ConsoleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="108" column="19" lean-forward="true" selection-start-line="108" selection-start-column="19" selection-end-line="108" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="70" column="24" selection-start-line="64" selection-start-column="21" selection-end-line="70" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,10 +863,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1016" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/model/helpers/VehiclesFiltering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="177" selection-start-line="177" selection-end-line="177" />
+        <state relative-caret-position="2006">
+          <caret line="118" column="11" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1065,10 +880,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/imokhonko/model/helpers/VehiclesFilteringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="205" column="4" selection-start-line="205" selection-start-column="4" selection-end-line="205" selection-end-column="4" />
+        <state relative-caret-position="112">
+          <caret line="131" column="46" selection-start-line="131" selection-start-column="46" selection-end-line="131" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/model/helpers/VehiclesFiller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/AllVehiclesList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="49" />
+          <folding>
+            <element signature="e#217#218#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/SettingsMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/FilterMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/FilteredVehicles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/view/ConsoleView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="104" column="21" lean-forward="true" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4087#4088#0" expanded="true" />
+            <element signature="e#4148#4149#0" expanded="true" />
           </folding>
         </state>
       </provider>

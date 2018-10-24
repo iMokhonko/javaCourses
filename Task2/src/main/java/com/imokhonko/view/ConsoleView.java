@@ -13,10 +13,32 @@ public class ConsoleView {
     private Locale locale = Locale.getDefault();
     private ResourceBundle rb = ResourceBundle.getBundle("language", locale, new UTF8Control());
 
+    // main menu items
+    private String GET_ALL_VEHICLES_MENU_ITEM = rb.getString("getAllVehiclesMenuItems");
+    private String FILTERED_VEHICLES_MENU_ITEM = rb.getString("filterVehiclesMenuItem");
+    private String SETTINGS_MENU_ITEM = rb.getString("settingsMenuItem");
+
+    // settings menu items
+    private String CHANGE_LANGUAGE_MENU_ITEM = rb.getString("changeLanguage");
+
+    // common user menu item choice phrase
+    private String USER_MENU_CHOICE = rb.getString("userMenuChoice");
+
+    // common phrases for nagivation
+    private String BACK_TO_MAIN_MENU_MENU_ITEM = rb.getString("backToMainMenu");
+    private String BACK_TO_SETTINGS_MENU_ITEM = rb.getString("backToSettingsMenu");
+    private String BACK_TO_FILTER_MENU_ITEM = rb.getString("backToFilterMenu");
+
+    // filter menu items
+    private String FLYABLE_VEHICLES_MENU_ITEM = rb.getString("flyableVehicles");
+    private String VEHICLES_WITH_SPEED_RANGE_FROM_200_TO_500 = rb.getString("vehiclesWithSpeedRangeFrom200To500");
+    private String VEHICLES_WITH_ALTITUDE_HIGHER_THAN_5000 = rb.getString("vehiclesWithAltitudeHigherThan5000");
+    private String VEHICLES_WITH_MIN_PRICE = rb.getString("vehiclesWithMinPrice");
+
     public void printMainMenu() {
-        System.out.println("1. " + rb.getString("getAllVehiclesMenuItems"));
-        System.out.println("2. " + rb.getString("filterVehiclesMenuItem"));
-        System.out.println("3. " + rb.getString("settingsMenuItem"));
+        System.out.println("1. " + GET_ALL_VEHICLES_MENU_ITEM);
+        System.out.println("2. " + FILTERED_VEHICLES_MENU_ITEM);
+        System.out.println("3. " + SETTINGS_MENU_ITEM);
 
         Scanner scanner = new Scanner(System.in);
 
@@ -44,8 +66,8 @@ public class ConsoleView {
     }
 
     public void printSettingsMenu() {
-        System.out.println("1. " + rb.getString("changeLanguage"));
-        System.out.println("2. " + rb.getString("backToMainMenu"));
+        System.out.println("1. " + CHANGE_LANGUAGE_MENU_ITEM);
+        System.out.println("2. " + BACK_TO_MAIN_MENU_MENU_ITEM);
 
         Scanner scanner = new Scanner(System.in);
 
@@ -69,8 +91,8 @@ public class ConsoleView {
         System.out.println("2. Русский");
         System.out.println("3. Українська");
 
-        System.out.println("4. " + rb.getString("backToSettingsMenu"));
-        System.out.println("5. " + rb.getString("backToMainMenu"));
+        System.out.println("4. " + BACK_TO_SETTINGS_MENU_ITEM);
+        System.out.println("5. " + BACK_TO_MAIN_MENU_MENU_ITEM);
 
         Scanner scanner = new Scanner(System.in);
         printUserMenuChoose();
@@ -78,15 +100,15 @@ public class ConsoleView {
 
         switch(menuItem) {
             case 1: {
-                Controller changeLanguge = new ChangeLanguageController(ChangeLanguageController.Language.ENGLISH);
+                Controller changeLanguge = new ChangeLanguage(ChangeLanguage.Language.ENGLISH);
                 changeLanguge.processRequest();
             } break;
             case 2: {
-                Controller changeLanguge = new ChangeLanguageController(ChangeLanguageController.Language.RUSSIAN);
+                Controller changeLanguge = new ChangeLanguage(ChangeLanguage.Language.RUSSIAN);
                 changeLanguge.processRequest();
             } break;
             case 3: {
-                Controller changeLanguge = new ChangeLanguageController(ChangeLanguageController.Language.UKRAINIAN);
+                Controller changeLanguge = new ChangeLanguage(ChangeLanguage.Language.UKRAINIAN);
                 changeLanguge.processRequest();
             } break;
             case 4: {
@@ -106,7 +128,7 @@ public class ConsoleView {
         vehicles.forEach(System.out::println);
 
         makeSpace(1);
-        System.out.println("1. " + rb.getString("backToMainMenu"));
+        System.out.println("1. " + BACK_TO_MAIN_MENU_MENU_ITEM);
         Scanner scanner = new Scanner(System.in);
         printUserMenuChoose();
         int menuItem = scanner.nextInt();
@@ -125,8 +147,8 @@ public class ConsoleView {
         vehicles.forEach(System.out::println);
 
         makeSpace(1);
-        System.out.println("1. " + rb.getString("backToFilterMenu"));
-        System.out.println("2. " + rb.getString("backToMainMenu"));
+        System.out.println("1. " + BACK_TO_FILTER_MENU_ITEM);
+        System.out.println("2. " + BACK_TO_MAIN_MENU_MENU_ITEM);
         Scanner scanner = new Scanner(System.in);
         printUserMenuChoose();
         int menuItem = scanner.nextInt();
@@ -147,11 +169,11 @@ public class ConsoleView {
     }
 
     public void printSortingMenu() {
-        System.out.println("1. " + rb.getString("vehiclesWithMinPrice"));
-        System.out.println("2. " + rb.getString("vehiclesWithAltitudeHigherThan5000"));
-        System.out.println("3. " + rb.getString("vehiclesWithSpeedRangeFrom200To500"));
-        System.out.println("4. " + rb.getString("flyableVehicles"));
-        System.out.println("5. " + rb.getString("backToMainMenu"));
+        System.out.println("1. " + VEHICLES_WITH_MIN_PRICE);
+        System.out.println("2. " + VEHICLES_WITH_ALTITUDE_HIGHER_THAN_5000);
+        System.out.println("3. " + VEHICLES_WITH_SPEED_RANGE_FROM_200_TO_500);
+        System.out.println("4. " + FLYABLE_VEHICLES_MENU_ITEM);
+        System.out.println("5. " + BACK_TO_MAIN_MENU_MENU_ITEM);
 
         Scanner scanner = new Scanner(System.in);
         printUserMenuChoose();
@@ -179,7 +201,6 @@ public class ConsoleView {
                 filteredVehicles.processRequest();
             } break;
             case 5: {
-                makeSpace(1);
                 Controller mainMenu = new MainMenu();
                 mainMenu.processRequest();
             } break;
@@ -192,7 +213,8 @@ public class ConsoleView {
     }
 
     private void printUserMenuChoose() {
-        System.out.print(rb.getString("userMenuChoice") + " -> ");
+        makeSpace(1);
+        System.out.print(USER_MENU_CHOICE + " -> ");
     }
 
 }

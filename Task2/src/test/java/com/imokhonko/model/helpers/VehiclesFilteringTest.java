@@ -82,7 +82,7 @@ public class VehiclesFilteringTest {
     public void getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException() {
         List<Vehicle> vehiclesEmptyList = new ArrayList<>();
         VehiclesFiltering vehiclesFiltering = new VehiclesFiltering();
-        List<Vehicle> actual = vehiclesFiltering.getMinPriceVehicles(vehiclesEmptyList);
+        vehiclesFiltering.getMinPriceVehicles(vehiclesEmptyList);
     }
 
     @Test

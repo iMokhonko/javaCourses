@@ -18,12 +18,14 @@ public class VehiclesFiltering {
     /**
      * Returns vehicles with min price.
      * @param vehicles list of vehicles.
+     * @return list of vehicles with min price.
+     * @throws VehiclesEmptyListException when vehicles list is empty.
      */
     public List<Vehicle> getMinPriceVehicles(final List<Vehicle> vehicles) {
-        int minPrice;
+        int minPrice = 0;
         try {
             minPrice = vehicles.stream().min((v1, v2) -> v1.getPrice() - v2.getPrice()).get().getPrice();
-        } catch(NoSuchElementException e) { minPrice = 0; }
+        } catch(NoSuchElementException e) {/*NOP*/} // if this exception throws the following getFilteredList(...) method will throw exception
 
         final int minPredicatePrice = minPrice;
         final Predicate<Vehicle> minPricePredicate = vehicle -> vehicle.getPrice() == minPredicatePrice;
@@ -33,6 +35,8 @@ public class VehiclesFiltering {
     /**
      * Returns vehicles with max price.
      * @param vehicles list of vehicles.
+     * @return list of vehicles max speed.
+     * @throws VehiclesEmptyListException when vehicles list is empty.
      */
     public List<Vehicle> getMaxSpeedVehicles(final List<Vehicle> vehicles) {
         final int maxSpeed = vehicles.stream()
@@ -48,10 +52,12 @@ public class VehiclesFiltering {
      * Returns vehicles that has release date not more than maxYears years from current date.
      * @param vehicles list of vehicles.
      * @param maxYears represent number of years that filter vehicles.
-     * @throws IllegalArgumentException if maxYears is less then zero.
+     * @return list of vehicles that has release date not more than {@code maxYears} from current date.
+     * @throws IllegalArgumentException if maxYears is less than zero.
+     * @throws VehiclesEmptyListException when vehicles list is empty.
      */
     public List<Vehicle> getYoungVehicles(final List<Vehicle> vehicles,
-                                                 int maxYears) throws IllegalArgumentException {
+                                          int maxYears) throws IllegalArgumentException {
         isNegativeArgumentsInvokeException(maxYears);
 
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
@@ -64,10 +70,12 @@ public class VehiclesFiltering {
      * Returns planes with bigger altitude than given altitude.
      * @param vehicles list of vehicles.
      * @param altitude altitude.
-     * @throws IllegalArgumentException if altitude is less then zero.
+     * @return list of vehicles that has altitude higher than {@code altitude}.
+     * @throws IllegalArgumentException if altitude is less than zero.
+     * @throws VehiclesEmptyListException when vehicles list is empty.
      */
     public List<Vehicle> getVehiclesWithHigherAltitude(final List<Vehicle> vehicles,
-                                                              int altitude) throws IllegalArgumentException {
+                                                       int altitude) throws IllegalArgumentException {
         isNegativeArgumentsInvokeException(altitude);
 
         Predicate<Vehicle> predicate = vehicle -> (vehicle.getClass() == Plane.class)
@@ -77,13 +85,14 @@ public class VehiclesFiltering {
     }
 
     /**
-     * Returns vehicles older than given year.
-     * @param vehicles list of model.
-     * @param year year.
-     * @throws IllegalArgumentException if year is less then zero.
+     * @param vehicles list of vehicles.
+     * @param year min year for vehicles.
+     * @return list of vehicles that has release date bigger than {@code year}.
+     * @throws IllegalArgumentException if year is less than zero.
+     * @throws VehiclesEmptyListException when vehicles list is empty.
      */
     public List<Vehicle> getVehiclesOlderThanYear(final List<Vehicle> vehicles,
-                                                         int year) throws IllegalArgumentException {
+                                                  int year) throws IllegalArgumentException {
         isNegativeArgumentsInvokeException(year);
 
         Predicate<Vehicle> predicate = vehicle -> vehicle.getReleaseDate() > year;
@@ -92,14 +101,17 @@ public class VehiclesFiltering {
     }
 
     /**
-     * Returns vehicles in speed range.
+     * Returns vehicles in parameterized speed range.
      * @param vehicles list of vehicles.
      * @param minSpeedRange min speed range value.
      * @param maxSpeedRange max speed range value.
+     * @return list of vehicles in speed range.
+     * @throws IllegalArgumentException if minSpeedRange or maxSpeedRange is less than zero.
+     * @throws VehiclesEmptyListException when vehicles list is empty.
      */
     public List<Vehicle> getVehiclesSpeedRangeExceptPlane(final List<Vehicle> vehicles,
-                                                                 int minSpeedRange,
-                                                                 int maxSpeedRange) throws IllegalArgumentException {
+                                                          int minSpeedRange,
+                                                          int maxSpeedRange) throws IllegalArgumentException {
         isNegativeArgumentsInvokeException(minSpeedRange, maxSpeedRange);
 
         Predicate<Vehicle> predicate = vehicle -> (vehicle.getClass() != Plane.class)
@@ -113,6 +125,8 @@ public class VehiclesFiltering {
      * Returns Flyable vehicles.
      * @param vehicles list of all vehicles.
      * @return list of Flyable vehicles.
+     * @throws VehiclesEmptyListException when vehicles list is empty.
+     * @throws VehicleNotFoundException when vehicles list is not contains Flyable vehicles.
      */
     public List<Flyable> getFlyableVehicles(final List<Vehicle> vehicles) throws VehicleNotFoundException {
         isEmptyListInvokeException(vehicles);
@@ -134,6 +148,8 @@ public class VehiclesFiltering {
      * Returns Moveable vehicles.
      * @param vehicles list of all vehicles.
      * @return list of Moveable vehicles.
+     * @throws VehiclesEmptyListException when vehicles list is empty.
+     * @throws VehicleNotFoundException when vehicles list is not contains Moveable vehicles.
      */
     public List<Moveable> getMoveableVehicles(final List<Vehicle> vehicles) throws VehicleNotFoundException {
         isEmptyListInvokeException(vehicles);
@@ -156,6 +172,8 @@ public class VehiclesFiltering {
      * Returns Swmiable vehicles.
      * @param vehicles list of all vehicles.
      * @return list of Swiamable vehicles that has max speed.
+     * @throws VehiclesEmptyListException when vehicles list is empty.
+     * @throws VehicleNotFoundException when vehicles list is not contains Swimable vehicles.
      */
     public List<Swimable> getSwimableVehicles(final List<Vehicle> vehicles) throws VehicleNotFoundException {
         isEmptyListInvokeException(vehicles);
@@ -198,7 +216,7 @@ public class VehiclesFiltering {
      * Filters list using filterCondition predicate.
      * @param list list of elements.
      * @param filterCondition condition clause
-     * @return new list of elements that matches to condition.
+     * @return new list of elements that matches to given condition.
      */
     private <T> List<T> getFilteredList(final List<T> list, Predicate<T> filterCondition) {
         isEmptyListInvokeException(list);

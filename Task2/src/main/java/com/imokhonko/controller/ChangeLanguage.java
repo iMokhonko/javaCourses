@@ -4,12 +4,12 @@ import com.imokhonko.model.exceptions.NoSuchLanguageException;
 
 import java.util.Locale;
 
-public class ChangeLanguageController extends Controller {
+public class ChangeLanguage extends Controller {
 
     private Language language;
     private Locale currentLocale = Locale.getDefault();
 
-    public ChangeLanguageController(Language language) {
+    public ChangeLanguage(Language language) {
         this.language = language;
     }
 

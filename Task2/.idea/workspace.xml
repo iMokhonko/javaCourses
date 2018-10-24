@@ -23,8 +23,20 @@
       <file leaf-file-name="VehiclesFiltering.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/model/VehiclesFiltering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-321">
-              <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+            <state relative-caret-position="301">
+              <caret line="218" column="58" selection-start-line="218" selection-start-column="58" selection-end-line="218" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VehiclesFilteringTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/imokhonko/model/helpers/VehiclesFilteringTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="80" column="47" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -82,18 +94,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/AllVehiclesList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/model/helpers/VehiclesFiller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/model/helpers/VehiclesFiltering.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/imokhonko/model/helpers/VehiclesFilteringTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/FilterMenu.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/language_en_UK.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/view/UTF8Control.java" />
         <option value="$PROJECT_DIR$/src/main/resources/language.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/view/ConsoleView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/ChangeLanguageController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/controller/FilteredVehicles.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/view/ConsoleView.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/imokhonko/model/helpers/VehiclesFilteringTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imokhonko/model/VehiclesFiltering.java" />
       </list>
     </option>
@@ -181,6 +193,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="imokhonko" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="taskTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Task2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="imokhonko" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -188,7 +209,37 @@
               <item name="Task2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="imokhonko" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="taskTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Task2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="taskTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Task2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="taskTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Task2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="taskTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Task2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,7 +287,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.VehiclesFilteringTest.getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.imokhonko.App" />
       <module name="Task2" />
@@ -274,11 +325,11 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VehiclesFilteringTest.getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehiclesFilteringTest.getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.imokhonko.model.*" />
+          <option name="PATTERN" value="com.imokhonko.model.helpers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -286,7 +337,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.imokhonko.model.helpers" />
       <option name="MAIN_CLASS_NAME" value="com.imokhonko.model.helpers.VehiclesFilteringTest" />
-      <option name="METHOD_NAME" value="getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException" />
+      <option name="METHOD_NAME" value="getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -297,11 +348,11 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VehiclesFilteringTest.getSwimableVehicles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehiclesFilteringTest.getMinPriceVehicles_oneMinPriceVehicle_returnListOfOneVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.imokhonko.model.*" />
+          <option name="PATTERN" value="com.imokhonko.model.helpers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -309,7 +360,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.imokhonko.model.helpers" />
       <option name="MAIN_CLASS_NAME" value="com.imokhonko.model.helpers.VehiclesFilteringTest" />
-      <option name="METHOD_NAME" value="getSwimableVehicles" />
+      <option name="METHOD_NAME" value="getMinPriceVehicles_oneMinPriceVehicle_returnListOfOneVehicle" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -382,19 +433,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.VehiclesFilteringTest.getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException" />
-      <item itemvalue="JUnit.VehiclesFilteringTest.getSwimableVehicles" />
       <item itemvalue="JUnit.VehiclesFilteringTest.getSwimableVehicles_getListOfSwimableVehicles_throwsVehicleNotFoundException" />
       <item itemvalue="JUnit.VehiclesFilteringTest" />
       <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.VehiclesFilteringTest.getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException" />
+      <item itemvalue="JUnit.VehiclesFilteringTest.getMinPriceVehicles_oneMinPriceVehicle_returnListOfOneVehicle" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.VehiclesFilteringTest.getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException" />
+        <item itemvalue="JUnit.VehiclesFilteringTest.getMinPriceVehicles_oneMinPriceVehicle_returnListOfOneVehicle" />
         <item itemvalue="JUnit.VehiclesFilteringTest" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.VehiclesFilteringTest.getSwimableVehicles_getListOfSwimableVehicles_throwsVehicleNotFoundException" />
-        <item itemvalue="JUnit.VehiclesFilteringTest.getSwimableVehicles" />
-        <item itemvalue="JUnit.VehiclesFilteringTest.getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException" />
       </list>
     </recent_temporary>
   </component>
@@ -423,26 +474,11 @@
       <workItem from="1540398645031" duration="1983000" />
       <workItem from="1540401542583" duration="4372000" />
       <workItem from="1540408136268" duration="25000" />
-      <workItem from="1540408169451" duration="74000" />
+      <workItem from="1540408169451" duration="2754000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VehiclesFilteringTest_getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException - 2018.10.23 at 22h 07m 42s.xml">
-      <configuration name="VehiclesFilteringTest.getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehiclesFilteringTest_getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException - 2018.10.23 at 22h 07m 45s.xml">
-      <configuration name="VehiclesFilteringTest.getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehiclesFilteringTest_getSwimableVehicles - 2018.10.23 at 22h 46m 10s.xml">
-      <configuration name="VehiclesFilteringTest.getSwimableVehicles" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehiclesFilteringTest_getSwimableVehicles_getListOfSwimableVehicles_throwsVehicleNotFoundException - 2018.10.23 at 22h 52m 54s.xml">
-      <configuration name="VehiclesFilteringTest.getSwimableVehicles_getListOfSwimableVehicles_throwsVehicleNotFoundException" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehiclesFilteringTest_getSwimableVehicles_getListOfSwimableVehicles_throwsVehicleNotFoundException - 2018.10.23 at 22h 54m 55s.xml">
-      <configuration name="VehiclesFilteringTest.getSwimableVehicles_getListOfSwimableVehicles_throwsVehicleNotFoundException" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VehiclesFilteringTest - 2018.10.23 at 22h 55m 35s.xml">
       <configuration name="VehiclesFilteringTest" configurationId="JUnit" />
     </history-entry>
@@ -458,9 +494,24 @@
     <history-entry file="VehiclesFilteringTest - 2018.10.23 at 23h 53m 10s.xml">
       <configuration name="VehiclesFilteringTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VehiclesFilteringTest - 2018.10.24 at 22h 33m 59s.xml">
+      <configuration name="VehiclesFilteringTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehiclesFilteringTest_getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException - 2018.10.24 at 22h 34m 31s.xml">
+      <configuration name="VehiclesFilteringTest.getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehiclesFilteringTest_getMinPriceVehicles_oneMinPriceVehicle_returnListOfOneVehicle - 2018.10.24 at 22h 34m 49s.xml">
+      <configuration name="VehiclesFilteringTest.getMinPriceVehicles_oneMinPriceVehicle_returnListOfOneVehicle" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehiclesFilteringTest_getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException - 2018.10.24 at 22h 34m 54s.xml">
+      <configuration name="VehiclesFilteringTest.getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehiclesFilteringTest_getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException - 2018.10.24 at 22h 35m 24s.xml">
+      <configuration name="VehiclesFilteringTest.getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55048000" />
+    <option name="totallyTimeSpent" value="57728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -469,6 +520,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32673267" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
@@ -481,7 +533,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4974093" visible="true" weight="0.2987897" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974093" visible="true" weight="0.2987897" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" sideWeight="0.50259066" side_tool="true" weight="0.28971255" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -489,7 +541,6 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39768976" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32673267" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32673267" />
@@ -545,13 +596,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/model/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/model/Plane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-374">
@@ -666,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/model/Vehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -721,38 +758,10 @@
         <state relative-caret-position="-1016" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/imokhonko/model/helpers/VehiclesFilteringTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="131" column="46" selection-start-line="131" selection-start-column="46" selection-end-line="131" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/SettingsMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/AllVehiclesList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -768,6 +777,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -775,24 +787,7 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="ResourceBundle" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/view/ConsoleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1070">
-          <caret line="168" column="27" selection-start-line="168" selection-start-column="27" selection-end-line="168" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/model/helpers/VehiclesFiller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/ChangeLanguageController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/ChangeLanguage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
@@ -819,16 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -847,10 +832,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/AllVehiclesList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/view/ConsoleView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="41" lean-forward="true" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/controller/SettingsMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/model/helpers/VehiclesFiller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/imokhonko/model/helpers/VehiclesFilteringTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="80" column="47" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/model/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+          <folding>
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imokhonko/model/VehiclesFiltering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-321">
-          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+        <state relative-caret-position="301">
+          <caret line="218" column="58" selection-start-line="218" selection-start-column="58" selection-end-line="218" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

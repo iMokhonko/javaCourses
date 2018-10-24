@@ -1,7 +1,7 @@
 package com.imokhonko.view;
 
 import com.imokhonko.controller.*;
-import com.imokhonko.model.Vehicle;
+import com.imokhonko.model.helpers.UTF8Control;
 
 import java.util.List;
 import java.util.Locale;
@@ -10,8 +10,8 @@ import java.util.Scanner;
 
 public class ConsoleView {
 
-    private Locale locale = new Locale("en", "US");
-    private ResourceBundle rb = ResourceBundle.getBundle("language", locale);
+    private Locale locale = Locale.getDefault();
+    private ResourceBundle rb = ResourceBundle.getBundle("language", locale, new UTF8Control());
 
     public void printMainMenu() {
         System.out.println("1. " + rb.getString("getAllVehiclesMenuItems"));
@@ -44,8 +44,8 @@ public class ConsoleView {
     }
 
     public void printSettingsMenu() {
-        System.out.println("1. Change language");
-        System.out.println("2. Back to main menu");
+        System.out.println("1. " + rb.getString("changeLanguage"));
+        System.out.println("2. " + rb.getString("backToMainMenu"));
 
         Scanner scanner = new Scanner(System.in);
 
@@ -66,11 +66,11 @@ public class ConsoleView {
 
     private void printLanguageMenu() {
         System.out.println("1. English");
-        System.out.println("2. Russian");
-        System.out.println("3. Ukrainian");
+        System.out.println("2. Русский");
+        System.out.println("3. Українська");
 
-        System.out.println("4. Back to settings menu");
-        System.out.println("5. Back to main menu");
+        System.out.println("4. " + rb.getString("backToSettingsMenu"));
+        System.out.println("5. " + rb.getString("backToMainMenu"));
 
         Scanner scanner = new Scanner(System.in);
         printUserMenuChoose();
@@ -78,13 +78,16 @@ public class ConsoleView {
 
         switch(menuItem) {
             case 1: {
-
+                Controller changeLanguge = new ChangeLanguageController(ChangeLanguageController.Language.ENGLISH);
+                changeLanguge.processRequest();
             } break;
             case 2: {
-
+                Controller changeLanguge = new ChangeLanguageController(ChangeLanguageController.Language.RUSSIAN);
+                changeLanguge.processRequest();
             } break;
             case 3: {
-
+                Controller changeLanguge = new ChangeLanguageController(ChangeLanguageController.Language.UKRAINIAN);
+                changeLanguge.processRequest();
             } break;
             case 4: {
                 makeSpace(1);
@@ -103,7 +106,7 @@ public class ConsoleView {
         vehicles.forEach(System.out::println);
 
         makeSpace(1);
-        System.out.println("1. Back to main menu");
+        System.out.println("1. " + rb.getString("backToMainMenu"));
         Scanner scanner = new Scanner(System.in);
         printUserMenuChoose();
         int menuItem = scanner.nextInt();
@@ -122,8 +125,8 @@ public class ConsoleView {
         vehicles.forEach(System.out::println);
 
         makeSpace(1);
-        System.out.println("1. Back filter menu");
-        System.out.println("2. Back to main menu");
+        System.out.println("1. " + rb.getString("backToFilterMenu"));
+        System.out.println("2. " + rb.getString("backToMainMenu"));
         Scanner scanner = new Scanner(System.in);
         printUserMenuChoose();
         int menuItem = scanner.nextInt();
@@ -144,11 +147,11 @@ public class ConsoleView {
     }
 
     public void printSortingMenu() {
-        System.out.println("1. Vehicles with min price");
-        System.out.println("2. Vehicles with altitude higher than 5000");
-        System.out.println("3. Vehicles with speed range from 200 to 500");
-        System.out.println("4. Flyable vehicles");
-        System.out.println("5. Back to main menu");
+        System.out.println("1. " + rb.getString("vehiclesWithMinPrice"));
+        System.out.println("2. " + rb.getString("vehiclesWithAltitudeHigherThan5000"));
+        System.out.println("3. " + rb.getString("vehiclesWithSpeedRangeFrom200To500"));
+        System.out.println("4. " + rb.getString("flyableVehicles"));
+        System.out.println("5. " + rb.getString("backToMainMenu"));
 
         Scanner scanner = new Scanner(System.in);
         printUserMenuChoose();
@@ -189,7 +192,7 @@ public class ConsoleView {
     }
 
     private void printUserMenuChoose() {
-        System.out.print("Enter the menu number -> ");
+        System.out.print(rb.getString("userMenuChoice") + " -> ");
     }
 
 }

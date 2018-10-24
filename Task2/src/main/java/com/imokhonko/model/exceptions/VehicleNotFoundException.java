@@ -1,4 +1,4 @@
-package com.imokhonko.exceptions;
+package com.imokhonko.model.exceptions;
 
 public class VehicleNotFoundException extends VehicleException {
 

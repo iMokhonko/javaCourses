@@ -1,7 +1,7 @@
 package com.imokhonko.model.helpers;
 
-import com.imokhonko.exceptions.VehicleNotFoundException;
-import com.imokhonko.exceptions.VehiclesEmptyListException;
+import com.imokhonko.model.exceptions.VehicleNotFoundException;
+import com.imokhonko.model.exceptions.VehiclesEmptyListException;
 import com.imokhonko.model.*;
 import com.imokhonko.model.interfaces.Flyable;
 import com.imokhonko.model.interfaces.Moveable;

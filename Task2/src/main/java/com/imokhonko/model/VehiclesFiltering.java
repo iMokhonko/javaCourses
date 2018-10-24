@@ -1,9 +1,7 @@
-package com.imokhonko.model.helpers;
+package com.imokhonko.model;
 
-import com.imokhonko.exceptions.VehicleNotFoundException;
-import com.imokhonko.exceptions.VehiclesEmptyListException;
-import com.imokhonko.model.Plane;
-import com.imokhonko.model.Vehicle;
+import com.imokhonko.model.exceptions.VehicleNotFoundException;
+import com.imokhonko.model.exceptions.VehiclesEmptyListException;
 import com.imokhonko.model.interfaces.Flyable;
 import com.imokhonko.model.interfaces.Moveable;
 import com.imokhonko.model.interfaces.Swimable;

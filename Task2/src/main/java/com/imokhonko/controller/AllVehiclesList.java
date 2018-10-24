@@ -2,7 +2,7 @@ package com.imokhonko.controller;
 
 import com.imokhonko.model.Vehicle;
 import com.imokhonko.model.helpers.VehiclesFiller;
-import com.imokhonko.model.helpers.VehiclesFiltering;
+import com.imokhonko.model.VehiclesFiltering;
 import com.imokhonko.view.ConsoleView;
 
 import java.util.ArrayList;

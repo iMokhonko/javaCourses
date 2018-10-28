@@ -1,4 +1,4 @@
-package com.imokhonko.model.helpers;
+package com.imokhonko.model.util;
 
 import java.io.IOException;
 import java.io.InputStream;

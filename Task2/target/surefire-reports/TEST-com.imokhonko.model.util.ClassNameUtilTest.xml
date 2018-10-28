@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="13" failures="0" name="com.imokhonko.model.helpers.VehiclesFilteringTest" time="0.167" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.imokhonko.model.util.ClassNameUtilTest" time="0.116" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2018.1.4"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_151\jre"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2018.1.4 clean package -f pom.xml"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2018.1.4 clean install -f pom.xml"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="ru"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -63,17 +63,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getYoungVehicles_oneYearOldVehicles_returnsListOfOneVehicle" time="0.162"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getSwimableVehicles_getListOfSwimableVehicles_throwsVehicleNotFoundException" time="0"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getFlyableVehicles_getEmptyListOfFlyableVehicles_throwsVehicleNotFoundException" time="0"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getMinPriceVehicles_emptyList_throwsVehiclesEmptyListException" time="0"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getYoungVehicles_NegativeMaxYearsValue_throwsIllegalArgumentException" time="0"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getVehiclesOlderThanYear_olderThan2016Year_returnListOfOneVehicle" time="0.001"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getFlyableVehicles_getListOfFlyableVehicles_returnListOfFlyableVehicles" time="0.001"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getVehiclesSpeedRangeExceptPlane_from200To600_returnListOfOneVehicle" time="0.001"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getMoveableVehicles_getEmptyListOfMoveableVehicles_throwsVehicleNotFoundException" time="0"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getVehiclesWithHigherAltitude_maxAltitudeVehicles_returnListOfTwoVehicles" time="0.002"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getMinPriceVehicles_oneMinPriceVehicle_returnListOfOneVehicle" time="0"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getMoveableVehicles_getListOfMoveableVehicles_returnListOfMoveableVehicles" time="0"/>
-  <testcase classname="com.imokhonko.model.helpers.VehiclesFilteringTest" name="getSwimableVehicles_getListOfSwimableVehicles_returnListOfSwimableVehicles" time="0"/>
+  <testcase classname="com.imokhonko.model.util.ClassNameUtilTest" name="getCurrentClassName" time="0.116"/>
 </testsuite>

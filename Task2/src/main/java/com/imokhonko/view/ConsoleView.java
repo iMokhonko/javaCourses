@@ -1,7 +1,7 @@
 package com.imokhonko.view;
 
 import com.imokhonko.controller.*;
-import com.imokhonko.model.helpers.UTF8Control;
+import com.imokhonko.model.util.UTF8Control;
 
 import java.util.List;
 import java.util.Locale;

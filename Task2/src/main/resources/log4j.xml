@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%p [%d{DATE}] %c: %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="rollingFileAppender" class="org.apache.log4j.RollingFileAppender">
+        <param name="file" value="logs.txt" />
+        <param name="MaxFileSize" value="5KB" />
+        <param name="MaxBackupIndex" value="2" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%p [%d{DATE}] %c: %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="HTMLAppender" class="org.apache.log4j.FileAppender">
+        <param  name="File" value= "logs.html"/>
+        <param  name="Append" value= "true" />
+        <layout class="org.apache.log4j.HTMLLayout"/>
+    </appender>
+
+    <!-- CONTROLLER LOGGER -->
+    <logger name="com.imokhonko.controller">
+        <level value="trace"/>
+        <appender-ref ref="rollingFileAppender"/>
+    </logger>
+
+    <!-- MODEL LOGGER -->
+    <logger name="com.imokhonko.model">
+        <level value="trace"/>
+        <appender-ref ref="rollingFileAppender"/>
+    </logger>
+
+    <!-- ROOT LOGGER -->
+    <root>
+        <level value="trace"/>
+        <!--<appender-ref ref="ConsoleAppender" />-->
+        <appender-ref ref="rollingFileAppender"/>
+        <appender-ref ref="HTMLAppender"/>
+    </root>
+
+</log4j:configuration>

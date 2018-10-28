@@ -5,6 +5,7 @@ import com.imokhonko.model.exceptions.VehiclesEmptyListException;
 import com.imokhonko.model.interfaces.Flyable;
 import com.imokhonko.model.interfaces.Moveable;
 import com.imokhonko.model.interfaces.Swimable;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -13,7 +14,11 @@ import java.util.NoSuchElementException;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static com.imokhonko.model.util.ClassNameUtil.getCurrentClassName;
+
 public class VehiclesFiltering {
+
+    private static final Logger logger = Logger.getLogger(getCurrentClassName());
 
     /**
      * Returns vehicles with min price.
@@ -22,10 +27,15 @@ public class VehiclesFiltering {
      * @throws VehiclesEmptyListException when vehicles list is empty.
      */
     public List<Vehicle> getMinPriceVehicles(final List<Vehicle> vehicles) {
+        logger.trace("trying to get min price vehicles");
         int minPrice = 0;
         try {
             minPrice = vehicles.stream().min((v1, v2) -> v1.getPrice() - v2.getPrice()).get().getPrice();
-        } catch(NoSuchElementException e) {/*NOP*/} // if this exception throws the following getFilteredList(...) method will throw exception
+        }
+        // if this exception throws the following getFilteredList(...) method will throw exception
+        catch(NoSuchElementException e) {logger.debug("there are no vehicles in vehicles list");}
+
+        logger.trace("min price is " + minPrice);
 
         final int minPredicatePrice = minPrice;
         final Predicate<Vehicle> minPricePredicate = vehicle -> vehicle.getPrice() == minPredicatePrice;
@@ -39,10 +49,12 @@ public class VehiclesFiltering {
      * @throws VehiclesEmptyListException when vehicles list is empty.
      */
     public List<Vehicle> getMaxSpeedVehicles(final List<Vehicle> vehicles) {
+        logger.trace("trying to get max speed vehicles");
         final int maxSpeed = vehicles.stream()
                 .min((v1, v2) -> v1.getMaxSpeed() - v2.getMaxSpeed())
                 .get().getPrice();
 
+        logger.trace("max speed is " + maxSpeed);
         final Predicate<Vehicle> maxSpeedPredicate = vehicle -> vehicle.getMaxSpeed() == maxSpeed;
 
         return getFilteredList(vehicles, maxSpeedPredicate);
@@ -58,6 +70,7 @@ public class VehiclesFiltering {
      */
     public List<Vehicle> getYoungVehicles(final List<Vehicle> vehicles,
                                           int maxYears) throws IllegalArgumentException {
+        logger.trace("trying to get young vehicles with maxYears = " + maxYears);
         isNegativeArgumentsInvokeException(maxYears);
 
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
@@ -76,6 +89,7 @@ public class VehiclesFiltering {
      */
     public List<Vehicle> getVehiclesWithHigherAltitude(final List<Vehicle> vehicles,
                                                        int altitude) throws IllegalArgumentException {
+        logger.trace("trying to get vehicles with higher altitude than " + altitude);
         isNegativeArgumentsInvokeException(altitude);
 
         Predicate<Vehicle> predicate = vehicle -> (vehicle.getClass() == Plane.class)
@@ -93,6 +107,7 @@ public class VehiclesFiltering {
      */
     public List<Vehicle> getVehiclesOlderThanYear(final List<Vehicle> vehicles,
                                                   int year) throws IllegalArgumentException {
+        logger.trace("trying to get older vehicles than " + year + " year");
         isNegativeArgumentsInvokeException(year);
 
         Predicate<Vehicle> predicate = vehicle -> vehicle.getReleaseDate() > year;
@@ -112,7 +127,15 @@ public class VehiclesFiltering {
     public List<Vehicle> getVehiclesSpeedRangeExceptPlane(final List<Vehicle> vehicles,
                                                           int minSpeedRange,
                                                           int maxSpeedRange) throws IllegalArgumentException {
+        logger.trace("trying to get vehicles (except planes) in speed range from" + minSpeedRange
+                + " to " + maxSpeedRange);
+
         isNegativeArgumentsInvokeException(minSpeedRange, maxSpeedRange);
+
+        if(maxSpeedRange < minSpeedRange) {
+            logger.debug("max speed can't be less than min speed");
+            throw new IllegalArgumentException("max speed can't be less than min speed");
+        }
 
         Predicate<Vehicle> predicate = vehicle -> (vehicle.getClass() != Plane.class)
                 && (vehicle.getMaxSpeed() >= minSpeedRange)
@@ -129,6 +152,7 @@ public class VehiclesFiltering {
      * @throws VehicleNotFoundException when vehicles list is not contains Flyable vehicles.
      */
     public List<Flyable> getFlyableVehicles(final List<Vehicle> vehicles) throws VehicleNotFoundException {
+        logger.trace("trying to get Flyable vehicles");
         isEmptyListInvokeException(vehicles);
 
         List<Flyable> flyableVehicles = new ArrayList<>();
@@ -138,8 +162,10 @@ public class VehiclesFiltering {
                 flyableVehicles.add((Flyable) vehicle);
         }
 
-        if(flyableVehicles.isEmpty())
+        if(flyableVehicles.isEmpty()) {
+            logger.debug("list doesn't contain Flyable vehicles");
             throw new VehicleNotFoundException("There is no Flyable vehicles");
+        }
 
         return flyableVehicles;
     }
@@ -152,6 +178,7 @@ public class VehiclesFiltering {
      * @throws VehicleNotFoundException when vehicles list is not contains Moveable vehicles.
      */
     public List<Moveable> getMoveableVehicles(final List<Vehicle> vehicles) throws VehicleNotFoundException {
+        logger.trace("trying to get movable vehicles");
         isEmptyListInvokeException(vehicles);
 
         List<Moveable> moveableVehicles = new ArrayList<>();
@@ -162,8 +189,10 @@ public class VehiclesFiltering {
             }
         }
 
-        if(moveableVehicles.isEmpty())
+        if(moveableVehicles.isEmpty()) {
+            logger.debug("list doesn't contain moveable vehicles");
             throw new VehicleNotFoundException("There is no Moveable vehicles");
+        }
 
         return moveableVehicles;
     }
@@ -176,6 +205,7 @@ public class VehiclesFiltering {
      * @throws VehicleNotFoundException when vehicles list is not contains Swimable vehicles.
      */
     public List<Swimable> getSwimableVehicles(final List<Vehicle> vehicles) throws VehicleNotFoundException {
+        logger.debug("trying to get swimable vehicles");
         isEmptyListInvokeException(vehicles);
 
         List<Swimable> swimableVehicles = new ArrayList<>();
@@ -186,30 +216,12 @@ public class VehiclesFiltering {
             }
         }
 
-        if(swimableVehicles.isEmpty())
+        if(swimableVehicles.isEmpty()) {
+            logger.debug("list doesn't contain swimable vehicles");
             throw new VehicleNotFoundException("There is no Swimable vehicles");
+        }
 
         return swimableVehicles;
-    }
-
-    /**
-     * If list is empty throws VehiclesEmptyListException (inherited from RuntimeException).
-     * @param list list that will be checked.
-     */
-    private void isEmptyListInvokeException(List list) {
-        if(list.isEmpty())
-            throw new VehiclesEmptyListException("Empty list of vehicles");
-    }
-
-    /**
-     * if the given argument is less then zero throws IllegalArgumentException.
-     * @param args arguments that will be checked.
-     */
-    private void isNegativeArgumentsInvokeException(int... args) {
-        for(int i = 0; i < args.length; i++) {
-            if(args[i] < 0)
-                throw new IllegalArgumentException("Negative argument + " + args[i]);
-        }
     }
 
     /**
@@ -223,6 +235,30 @@ public class VehiclesFiltering {
         return list.stream()
                 .filter(filterCondition)
                 .collect(Collectors.toList());
+    }
+
+    /**
+     * If list is empty throws VehiclesEmptyListException (inherited from RuntimeException).
+     * @param list list that will be checked.
+     */
+    private void isEmptyListInvokeException(List list) {
+        if(list.isEmpty()) {
+            logger.debug("empty list, throwing exception");
+            throw new VehiclesEmptyListException("Empty list of vehicles");
+        }
+    }
+
+    /**
+     * if the given argument is less then zero throws IllegalArgumentException.
+     * @param args arguments that will be checked.
+     */
+    private void isNegativeArgumentsInvokeException(int... args) {
+        for(int i = 0; i < args.length; i++) {
+            if(args[i] < 0) {
+                logger.debug("given argument is less than zero: " + args[i] + "[" + i + "]");
+                throw new IllegalArgumentException("Negative argument + " + args[i]);
+            }
+        }
     }
 
 }

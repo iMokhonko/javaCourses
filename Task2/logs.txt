@@ -1,0 +1,2 @@
+DEBUG [28 окт 2018 14:19:32,813] com.imokhonko.model.VehiclesFiltering: trying to get swimable vehicles
+DEBUG [28 окт 2018 14:19:32,813] com.imokhonko.model.VehiclesFiltering: trying to get swimable vehicles

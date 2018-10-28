@@ -1,4 +1,4 @@
-package com.imokhonko.model.helpers;
+package com.imokhonko.model.util;
 
 import com.imokhonko.model.*;
 

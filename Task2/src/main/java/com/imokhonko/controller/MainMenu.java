@@ -1,13 +1,25 @@
 package com.imokhonko.controller;
 
-import com.imokhonko.view.ConsoleView;
+import com.imokhonko.model.Bank;
+import com.imokhonko.model.Client;
+import com.imokhonko.view.View;
 
-public class MainMenu extends Controller {
+import java.util.List;
 
-    private ConsoleView view = new ConsoleView();
+public class MainMenu implements Controller {
+
+    List<Client> clients = null;
+    List<Bank> banks = null;
+    View view = null;
+
+    public MainMenu(List<Client> clients, List<Bank> banks) {
+        this.clients = clients;
+        this.banks = banks;
+        view = new View(clients, banks);
+    }
 
     @Override
     public void processRequest() {
-        view.printMainMenu();
+        view.printMainMenu(clients, banks);
     }
 }

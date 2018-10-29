@@ -1,7 +1,7 @@
 package com.imokhonko.controller;
 
-public abstract class Controller {
+public interface Controller {
 
-    public abstract void processRequest();
+    void processRequest();
 
 }

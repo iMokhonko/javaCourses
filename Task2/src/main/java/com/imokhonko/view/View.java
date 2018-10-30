@@ -1,69 +1,64 @@
 package com.imokhonko.view;
 
-import com.imokhonko.controller.ClientCredits;
-import com.imokhonko.controller.MainMenu;
-import com.imokhonko.model.Bank;
-import com.imokhonko.model.Client;
-import com.imokhonko.model.Loan;
+import com.imokhonko.controller.AllCredits;
+import com.imokhonko.Credit;
+import com.imokhonko.controller.FindCredit;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class View {
 
-    List<Client> clients = null;
-    List<Bank> banks = null;
+    public static void printMainMenu() {
+        System.out.println("1. Best credits for you");
+        System.out.println("2. Find credit");
 
-    public View(List<Client> clients, List<Bank> banks) {
-        this.clients = clients;
-        this.banks = banks;
-    }
-
-    public void printMainMenu(List<Client> clients, List<Bank> banks) {
-        System.out.println("1. Choose credit");
-        System.out.println("2. List of available credits");
-        System.out.println("3. Your credits");
-
+        System.out.printf("Choose -> ");
         Scanner scanner = new Scanner(System.in);
-
         int choose = scanner.nextInt();
 
         switch(choose) {
             case 1: {
-
-            } break;
+                AllCredits allCredits = new AllCredits();
+                allCredits.processRequest();
+                break;
+            }
             case 2: {
-
-            } break;
-            case 3: {
-//                ClientCredits clientCredits = new ClientCredits(clients.get(0));
-//                clientCredits.setBanks(banks);
-//                clientCredits.processRequest();
-            } break;
+                FindCredit findCredit = new FindCredit();
+                findCredit.processRequest();
+                break;
+            }
             default: {
-                System.out.println("erroreowroo");
+                System.out.println("________________________________");
+                System.out.println("there is no such menu item");
+                System.out.println("________________________________");
+                printMainMenu();
             }
         }
 
     }
 
-    public void printUserLoans(List<Loan> loans) {
-        loans.forEach(System.out::println);
+    public static void printAllCredits(List<Credit> credits) {
+        credits.forEach(System.out::println);
 
         System.out.println("1. Back to main menu");
 
+        System.out.printf("Choose -> ");
         Scanner scanner = new Scanner(System.in);
-
         int choose = scanner.nextInt();
 
         switch(choose) {
             case 1: {
-                MainMenu mainMenu = new MainMenu(clients, banks);
+                printMainMenu();
+                break;
             }
-            break;
-
+            default: {
+                System.out.println("________________________________");
+                System.out.println("input 1 to back to main menu");
+                System.out.println("________________________________");
+                printAllCredits(credits);
+            }
         }
-
     }
 
 }

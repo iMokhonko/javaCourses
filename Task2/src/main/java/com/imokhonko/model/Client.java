@@ -1,4 +1,4 @@
-package com.imokhonko;
+package com.imokhonko.model;
 
 import java.util.ArrayList;
 import java.util.List;

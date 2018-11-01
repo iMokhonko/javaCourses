@@ -1,15 +1,28 @@
-package com.imokhonko;
+package com.imokhonko.model;
 
 import java.util.Objects;
 
 public class Credit {
 
+    /* Name of the credit */
     private final String name;
+
+    /* Min sum in this credit */
     private final double minSum;
+
+    /* Max sum in this credit */
     private final double maxSum;
+
+    /* Number of months that client has to pay out the credit */
     private final int months;
+
+    /* Percents that client must pay to bank for this credit */
     private final double percents;
+
+    /* Opportunity to pay out the all credit sum before the deadline */
     private final boolean payAhed;
+
+    /* Opportunity to extend the number of months to pay out the credit */
     private final int maxMonthIncrease;
 
     private Credit(String name, double minSum, double maxSum, int months,

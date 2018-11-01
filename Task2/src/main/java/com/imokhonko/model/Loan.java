@@ -1,13 +1,20 @@
-package com.imokhonko;
+package com.imokhonko.model;
 
 import com.imokhonko.exceptions.InvalidCreditMonthsException;
 import com.imokhonko.exceptions.InvalidCreditSumException;
 
 public class Loan {
 
+    /* Client that take the credit */
     private final Client client;
+
+    /* Credit that client want to take */
     private final Credit credit;
+
+    /* The money sum that client want to take */
     private final double creditSum;
+
+    /* The number of months that client will be paying off the credit */
     private final int creditMonths;
 
     private Loan(Builder builder) throws InvalidCreditSumException, InvalidCreditMonthsException {
@@ -75,6 +82,12 @@ public class Loan {
         return getFinalSumToPay() / creditMonths;
     }
 
+    /**
+     * Ensures that requested sum is suitable for given credit.
+     * @param creditSum the sum of money that client want to take.
+     * @param credit
+     * @throws InvalidCreditSumException if client requested sum that less the min sum or more in the credit conditions.
+     */
     private void checkCreditSum(double creditSum, Credit credit) throws InvalidCreditSumException {
         if(creditSum < credit.getMinSum()) {
             throw new InvalidCreditSumException("credit sum can`t be less than min credit sum value = " + credit.getMinSum());
@@ -84,16 +97,20 @@ public class Loan {
         }
     }
 
+    /**
+     * Ensures that requested months number is suitable for given credit.
+     * @param creditMonths the number of a months for paying off the credit final sum.
+     * @param credit
+     * @throws InvalidCreditMonthsException if number of months is less or more in the credit conditions.
+     */
     private void checkCreditMonths(int creditMonths, Credit credit) throws InvalidCreditMonthsException {
         if(creditMonths > credit.getMonths()) {
             throw new InvalidCreditMonthsException("Credit months count can`t be more than max value = " + credit.getMonths());
         }
-        if(creditMonths < 0) {
-            throw new IllegalArgumentException("creditMonths can`t be less than zero");
+        if(creditMonths < 1) {
+            throw new InvalidCreditMonthsException("creditMonths can`t be less than zero");
         }
     }
-
-
 
     @Override
     public String toString() {

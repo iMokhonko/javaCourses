@@ -4,8 +4,10 @@ import com.imokhonko.exceptions.InvalidCreditMonthsException;
 import com.imokhonko.exceptions.InvalidCreditSumException;
 import com.imokhonko.exceptions.NoSuchCreditInBankException;
 import com.imokhonko.exceptions.UnableOpenCreditException;
+import com.imokhonko.model.*;
 import org.junit.Before;
 import org.junit.Test;
+
 
 import static org.junit.Assert.*;
 
@@ -42,7 +44,7 @@ public class BankTest {
     }
 
     @Test(expected = UnableOpenCreditException.class)
-    public void openLoan_openTwoLoansInOneBank_throwsUnableOpenCreditException() throws InvalidCreditSumException, InvalidCreditMonthsException, NoSuchCreditInBankException, UnableOpenCreditException {
+    public void openLoan_openTwoLoansInOneBankByOneClient_throwsUnableOpenCreditException() throws InvalidCreditSumException, InvalidCreditMonthsException, NoSuchCreditInBankException, UnableOpenCreditException {
         privat24.openLoan(new Loan.Builder().client(client).credit(credit1Percent).creditSum(35000).creditMonths(10).build());
         privat24.openLoan(new Loan.Builder().client(client).credit(credit1Percent).creditSum(35000).creditMonths(10).build());
     }
@@ -53,24 +55,9 @@ public class BankTest {
 
     }
 
-    @Test(expected = InvalidCreditSumException.class)
-    public void openLoan_takeSumMoreThanCreditCanOffer_throwsInvalidCreditSumException() throws InvalidCreditSumException, InvalidCreditMonthsException, NoSuchCreditInBankException, UnableOpenCreditException {
-        universalBank.openLoan(new Loan.Builder().client(client).credit(credit7Percent).creditSum(10000000).creditMonths(10).build());
-    }
-
     @Test(expected = NoSuchCreditInBankException.class)
     public void openLoan_takeCreditThatBankDoesNotHave_throwsInvalidCreditSumException() throws InvalidCreditSumException, InvalidCreditMonthsException, NoSuchCreditInBankException, UnableOpenCreditException {
         universalBank.openLoan(new Loan.Builder().client(client).credit(credit5Percent).creditSum(50000).creditMonths(10).build());
-    }
-
-    @Test(expected = InvalidCreditMonthsException.class)
-    public void loanWithBiggerValueOfMonthsInCredit__throwsInvalidCreditSumException() throws InvalidCreditSumException, InvalidCreditMonthsException {
-        new Loan.Builder().client(client).credit(credit1Percent).creditSum(35000).creditMonths(13).build();
-    }
-
-    @Test(expected = InvalidCreditSumException.class)
-    public void loanWithLessValueThanMaxSum__throwsInvalidCreditSumException() throws InvalidCreditSumException, InvalidCreditMonthsException {
-        new Loan.Builder().client(client).credit(credit1Percent).creditSum(1).creditMonths(5).build();
     }
 
     @Test

@@ -1,13 +1,16 @@
 package com.imokhonko.model.dao;
 
-import com.imokhonko.Bank;
-import com.imokhonko.Credit;
-import com.imokhonko.CreditsUtil;
+import com.imokhonko.model.Bank;
+import com.imokhonko.model.Credit;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
+/**
+ * This class only supposed to produce raw data for program.
+ */
 public class BanksDAO {
 
     public List<Bank> getBanks() {
@@ -29,12 +32,21 @@ public class BanksDAO {
         return Arrays.asList(privat24, universalBank, otpBank);
     }
 
-    public List<Credit> findCredit(double sum, int months, double percents) {
+    public List<Credit> findCredit(final double sum, final int months, final double percents) {
         List<Bank> banks = getBanks();
-        List<Credit> foundCredits = new ArrayList<>();
 
-        // TODO implement
+        List<Credit> allCredits = new ArrayList<>();
 
+        for(Bank bank : banks) {
+            allCredits.addAll(bank.getAvailableCredits());
+        }
+
+        List<Credit> foundCredits = allCredits.stream()
+                .filter(credit -> sum >= credit.getMinSum())
+                .filter(credit -> sum <= credit.getMaxSum())
+                .filter(credit -> months <= credit.getMonths())
+                .filter(credit -> percents <= credit.getPercents())
+                .collect(Collectors.toList());
 
         return foundCredits;
     }

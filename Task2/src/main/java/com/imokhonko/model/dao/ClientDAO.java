@@ -1,16 +1,15 @@
 package com.imokhonko.model.dao;
 
-import com.imokhonko.Client;
-import com.imokhonko.exceptions.NoSuchClientException;
+import com.imokhonko.model.Client;
 
 public class ClientDAO {
 
-    public static Client getClientByName(String name) throws NoSuchClientException {
+    public static Client getClientByName(String name) {
         if(name.equals("Ivan")) {
             Client client = new Client.Builder().name("Ivan").age(19).build();
             return client;
         }
-        throw new NoSuchClientException("Client doesn't exist!");
+        return null;
     }
 
 }

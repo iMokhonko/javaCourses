@@ -1,11 +1,20 @@
-package com.imokhonko;
+package com.imokhonko.model;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
+/**
+ * This class is used for sorting and filtering credits.
+ */
 public class CreditsUtil {
 
+    /**
+     * Sorts the credits from the given banks.
+     * Sorting considers the opportunity to pay off the credit ahead before the deadline
+     * and the number of months that client can expand.
+     * @param banks list of banks with credits
+     * @return list of sorted credits.
+     */
     public static List<Credit> getBestCredits(List<Bank> banks) {
         List<Credit> bestCredits = new ArrayList<>();
 

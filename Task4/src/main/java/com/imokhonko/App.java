@@ -1,5 +1,7 @@
 package com.imokhonko;
 
+import com.imokhonko.components.Sentence;
+
 import java.io.*;
 import java.util.List;
 
@@ -20,9 +22,9 @@ public class App {
 
         String text = new String(textFromFile);
 
-        List<String> sentences = StringUtil.getNaturalOrderingSentences(text);
+        List<Sentence> sentences = StringUtil.getNaturalOrderingSentences(text);
 
-        for(String s : sentences) {
+        for(Object s : sentences) {
             System.out.println(s);
         }
 

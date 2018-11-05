@@ -1,7 +1,7 @@
 package com.imokhonko.model;
 
-import com.imokhonko.exceptions.InvalidCreditMonthsException;
-import com.imokhonko.exceptions.InvalidCreditSumException;
+import com.imokhonko.model.exceptions.InvalidCreditMonthsException;
+import com.imokhonko.model.exceptions.InvalidCreditSumException;
 
 public class Loan {
 

@@ -1,15 +1,14 @@
 package com.imokhonko.model;
 
-import com.imokhonko.exceptions.InvalidCreditMonthsException;
-import com.imokhonko.exceptions.InvalidCreditSumException;
-import com.imokhonko.exceptions.NoSuchCreditInBankException;
-import com.imokhonko.exceptions.UnableOpenCreditException;
+import com.imokhonko.model.exceptions.InvalidCreditMonthsException;
+import com.imokhonko.model.exceptions.InvalidCreditSumException;
+import com.imokhonko.model.exceptions.NoSuchCreditInBankException;
+import com.imokhonko.model.exceptions.UnableOpenCreditException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.Assert.*;
 

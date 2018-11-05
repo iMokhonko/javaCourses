@@ -1,7 +1,7 @@
 package com.imokhonko.model;
 
-import com.imokhonko.exceptions.NoSuchCreditInBankException;
-import com.imokhonko.exceptions.UnableOpenCreditException;
+import com.imokhonko.model.exceptions.NoSuchCreditInBankException;
+import com.imokhonko.model.exceptions.UnableOpenCreditException;
 
 import java.util.ArrayList;
 import java.util.List;

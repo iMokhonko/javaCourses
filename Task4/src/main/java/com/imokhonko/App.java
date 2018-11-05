@@ -22,7 +22,7 @@ public class App {
 
         String text = new String(textFromFile);
 
-        List<Sentence> sentences = StringUtil.getNaturalOrderingSentences(text);
+        List<Sentence> sentences = StringUtil.getOrderedSentences(text);
 
         for(Object s : sentences) {
             System.out.println(s);

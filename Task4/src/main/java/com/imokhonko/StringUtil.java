@@ -19,8 +19,8 @@ public class StringUtil {
      * @param text text that will be sorted by number of words in the sentences.
      * @return sorted list of sentences from text in natural order.
      */
-    public static List<Sentence> getNaturalOrderingSentences(String text) {
-        return getNaturalOrderingSentences(text, DEFAULT_COMPARATOR);
+    public static List<Sentence> getOrderedSentences(String text) {
+        return getOrderedSentences(text, DEFAULT_COMPARATOR);
     }
 
     /**
@@ -28,7 +28,7 @@ public class StringUtil {
      * @param text text that will be sorted using given comparator.
      * @return sorted list of sentences by given comparator.
      */
-    public static List<Sentence> getNaturalOrderingSentences(String text, Comparator<? super Sentence> comparator) {
+    public static List<Sentence> getOrderedSentences(String text, Comparator<? super Sentence> comparator) {
         Pattern sentencePattern = Pattern.compile("([A-Z0-9]).*?\\.", Pattern.MULTILINE);
         Matcher sentenceMatcher = sentencePattern.matcher(text);
 

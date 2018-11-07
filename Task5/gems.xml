@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gem>
+    <item id="1">
+        <name>Diamond</name>
+        <preciousness>precious</preciousness>
+        <origin>Kiev</origin>
+        <visualParameters>
+            <color>green</color>
+            <transparency>21</transparency>
+            <faces>7</faces>
+        </visualParameters>
+        <value>15</value>
+    </item>
+    <item id="2">
+        <name>Ruby</name>
+        <preciousness>semiprecious</preciousness>
+        <origin>Alaska</origin>
+        <visualParameters>
+            <color>green</color>
+            <transparency>35</transparency>
+            <faces>4</faces>
+        </visualParameters>
+        <value>7</value>
+    </item>
+</gem>

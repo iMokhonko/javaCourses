@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+      <xs:element name="gem">
+            <xs:complexType>
+                  <xs:sequence>
+                        <xs:element name="item" maxOccurs="unbounded">
+                              <xs:complexType>
+                                    <xs:sequence>
+                                          <xs:element name="name">
+                                                <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                            <xs:pattern value="[a-zA-Z0-9_+.]+"/>
+                                                      </xs:restriction>
+                                                </xs:simpleType>
+                                          </xs:element>
+                                          <xs:element name="preciousness">
+                                                <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="precious"/>
+                                                            <xs:enumeration value="semiprecious"/>
+                                                      </xs:restriction>
+                                                </xs:simpleType>
+                                          </xs:element>
+                                          <xs:element name="origin">
+                                                <xs:simpleType>
+                                                      <xs:restriction base="xs:string">
+                                                            <xs:pattern value="[a-zA-Z,.0-9_]+"/>
+                                                      </xs:restriction>
+                                                </xs:simpleType>
+                                          </xs:element>
+                                          <xs:element name="visualParameters">
+                                                <xs:complexType>
+                                                      <xs:sequence>
+                                                            <xs:element name="color">
+                                                                  <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                              <xs:pattern value="[-a-zA-Z]+"/>
+                                                                        </xs:restriction>
+                                                                  </xs:simpleType>
+                                                            </xs:element>
+                                                            <xs:element name="transparency">
+                                                                  <xs:simpleType>
+                                                                        <xs:restriction base="xs:integer">
+                                                                              <xs:minInclusive value="0"/>
+                                                                              <xs:maxInclusive value="100"/>
+                                                                        </xs:restriction>
+                                                                  </xs:simpleType>
+                                                            </xs:element>
+                                                            <xs:element name="faces">
+                                                                  <xs:simpleType>
+                                                                        <xs:restriction base="xs:integer">
+                                                                              <xs:minInclusive value="4"/>
+                                                                              <xs:maxInclusive value="15"/>
+                                                                        </xs:restriction>
+                                                                  </xs:simpleType>
+                                                            </xs:element>
+                                                      </xs:sequence>
+                                                </xs:complexType>
+                                          </xs:element>
+                                          <xs:element name="value">
+                                                <xs:simpleType>
+                                                      <xs:restriction base="xs:integer">
+                                                            <xs:minInclusive value="1"/>
+                                                            <xs:maxInclusive value="10000000"/>
+                                                      </xs:restriction>
+                                                </xs:simpleType>
+                                          </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:int" use="required"></xs:attribute>
+                              </xs:complexType>
+                        </xs:element>
+                  </xs:sequence>
+            </xs:complexType>
+      </xs:element>
+</xs:schema>

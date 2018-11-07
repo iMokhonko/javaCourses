@@ -29,7 +29,7 @@ public class StringUtil {
      * @return sorted list of sentences by given comparator.
      */
     public static List<Sentence> getOrderedSentences(String text, Comparator<? super Sentence> comparator) {
-        Pattern sentencePattern = Pattern.compile("([A-Z0-9]).*?\\.", Pattern.MULTILINE);
+        Pattern sentencePattern = Pattern.compile("([A-Z0-9]).*?[.!?]", Pattern.MULTILINE);
         Matcher sentenceMatcher = sentencePattern.matcher(text);
 
         List<Sentence> sentences = new LinkedList<>();
@@ -98,11 +98,6 @@ public class StringUtil {
         }
     }
 
-    /**
-     * Sort list of sentences by given comparator.
-     * @param list list of sentences.
-     * @return sorted list of sentences.
-     */
     private static List<Sentence> sortByWordsNumber(List<Sentence> list, Comparator<? super Sentence> comparator) {
         list.sort(comparator);
         return list;
